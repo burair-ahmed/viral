@@ -1,26 +1,130 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-caveat), cursive;
+  
+  --color-bg-primary: #071822;
+  --color-bg-secondary: #0B2A3B;
+  --color-accent-cyan: #2EE6E6;
+  --color-accent-cyan-hover: #7FFAFA;
+  --color-accent-cyan-dim: #1B8C8C;
+  --color-accent-cyan-glow: rgba(46, 230, 230, 0.15);
+  
+  --shadow-glow: 0 0 20px rgba(46, 230, 230, 0.3);
+  --shadow-glow-strong: 0 0 35px rgba(46, 230, 230, 0.5);
+  --shadow-glow-inset: inset 0 0 15px rgba(46, 230, 230, 0.2);
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-circuit-flow: circuit-flow 25s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 3s infinite;
+  --animate-sheen: sheen 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  
+  @keyframes circuit-flow {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 2px rgba(46, 230, 230, 0.4)); }
+    50% { opacity: 0.8; filter: drop-shadow(0 0 10px rgba(46, 230, 230, 0.8)); }
+  }
+  @keyframes sheen {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  @keyframes marquee-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
   }
 }
 
+:root {
+  --background: #071822;
+  --foreground: #F5F9FA;
+  scroll-behavior: auto; /* Required for Lenis smooth scroll */
+}
+
+/* Custom global styles */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Lenis scroll styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071822;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B8C8C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2EE6E6;
+}
+
+/* Custom helper classes */
+.text-gradient {
+  background: linear-gradient(135deg, #F5F9FA 30%, #2EE6E6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #2EE6E6 0%, #7FFAFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-circuit-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(46, 230, 230, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46, 230, 230, 0.03) 1px, transparent 1px);
+}
+
+/* Custom cursor hide default */
+@media (pointer: fine) {
+  .custom-cursor-active, .custom-cursor-active * {
+    cursor: none !important;
+  }
 }
