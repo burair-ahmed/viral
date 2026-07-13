@@ -7,22 +7,22 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "Alex Thorne",
-    role: "Chief Attention Engineer",
-    bio: "Ex-algorithmic designer at TikTok. Specializes in building high-frequency organic loops.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    name: "Ashraf Jabbar Qureshi",
+    role: "Chairman & Founder",
+    bio: "Serial entrepreneur with ventures spanning real estate, construction, and global retail. Founded Viral Marketing driven by a lifelong obsession with building things that last — and ideas that spread.",
+    image: "/MQP06061-copy.webp",
   },
   {
-    name: "Maya Lin",
-    role: "Director of Cultural Hijacking",
-    bio: "Award-winning creative director. Masters the art of translating subcultures into campaigns.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    name: "Dai Ali Daniyal",
+    role: "Chief Executive Officer",
+    bio: "Armed with degrees in Business Management and International Business, Dai architects the strategy that turns content into culture. His vision: make every campaign impossible to ignore.",
+    image: "/10-2.webp",
   },
   {
-    name: "Marcus Vance",
-    role: "Lead Audience Architect",
-    bio: "Growth expert behind three SaaS decacorns. Optimizes virality into conversion funnels.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    name: "Armash Ashraf",
+    role: "Chief Operating Officer",
+    bio: "Engineer by training, operator by instinct. Armash runs the systems that keep campaigns moving at scale — precision, creativity, and relentless execution baked into every workflow.",
+    image: "/7.webp",
   },
 ];
 
