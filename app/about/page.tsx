@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import { Users, Lightbulb, Zap, Rocket, Star, Heart } from "lucide-react";
+import { Users, Lightbulb, Zap, Rocket, Star, Heart, Flag, TrendingUp, Globe } from "lucide-react";
 import GlowCard from "@/components/ui/GlowCard";
 import Image from "next/image";
 
@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: "Ashraf Jabbar Qureshi",
     role: "Chairman & Founder",
-    bio: "Serial entrepreneur with ventures spanning real estate, construction, and global retail. Founded Viral Marketing driven by a lifelong obsession with building things that last — and ideas that spread.",
+    bio: "Serial entrepreneur with ventures spanning real estate, construction, and global retail. Founded Viral Marketing driven by a lifelong obsession with building things that last â€” and ideas that spread.",
     image: "/MQP06061-copy.webp",
   },
   {
@@ -21,7 +21,7 @@ const teamMembers = [
   {
     name: "Armash Ashraf",
     role: "Chief Operating Officer",
-    bio: "Engineer by training, operator by instinct. Armash runs the systems that keep campaigns moving at scale — precision, creativity, and relentless execution baked into every workflow.",
+    bio: "Engineer by training, operator by instinct. Armash runs the systems that keep campaigns moving at scale â€” precision, creativity, and relentless execution baked into every workflow.",
     image: "/7.webp",
   },
 ];
@@ -45,9 +45,34 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2024", title: "Agency Foundation", desc: "Started by three growth hackers in a garage." },
-  { year: "2025", title: "First 100M Campaign", desc: "Engineered the organic loop for a leading web3 protocol." },
-  { year: "2026", title: "Viral Lab Expansion", desc: "Built our bespoke content labs in London and Berlin." },
+  {
+    year: "2023",
+    title: "The Spark",
+    desc: "Viral Marketing was founded in Karachi with a clear mandate: make organic reach a science, not a gamble.",
+    icon: <Flag size={18} />,
+    tag: "Foundation",
+  },
+  {
+    year: "2024",
+    title: "First Breakthrough",
+    desc: "Launched our first cross-platform viral loop campaign, achieving 50M+ impressions with zero paid spend.",
+    icon: <TrendingUp size={18} />,
+    tag: "Growth",
+  },
+  {
+    year: "2025",
+    title: "Going Global",
+    desc: "Expanded operations internationally, partnering with brands across the Middle East, Europe, and South Asia.",
+    icon: <Globe size={18} />,
+    tag: "Expansion",
+  },
+  {
+    year: "2026",
+    title: "Viral Lab Launched",
+    desc: "Opened our bespoke content production lab â€” engineering high-velocity content at unprecedented scale.",
+    icon: <Rocket size={18} />,
+    tag: "Innovation",
+  },
 ];
 
 export default function About() {
@@ -186,33 +211,80 @@ export default function About() {
       {/* 5. HISTORY / MILESTONES TIMELINE */}
       <section className="w-full bg-bg-secondary/20 border-y border-accent-cyan-dim/10 py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-circuit-grid opacity-10 pointer-events-none" />
-        
-        <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-cyan/3 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="relative z-10">
+          {/* Section header */}
+          <div className="text-center mb-16 px-6">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#2EE6E6] mb-5">
+              <Star size={11} /> Our Journey
+            </span>
             <h2 className="font-display text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#F5F9FA]">
               Our Trajectory
             </h2>
+            <p className="text-xs text-[#F5F9FA]/30 mt-3 tracking-widest uppercase">Scroll to explore â†’</p>
           </div>
 
-          <div className="relative border-l border-accent-cyan-dim/20 pl-8 flex flex-col gap-12">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="relative">
-                {/* Timeline node */}
-                <div className="absolute -left-12 top-1.5 w-8 h-8 rounded-lg bg-bg-secondary border border-accent-cyan flex items-center justify-center text-xs font-bold text-accent-cyan shadow-glow">
-                  {milestone.year.substring(2)}
-                </div>
-                
-                <h3 className="font-display text-lg font-bold tracking-wider text-[#F5F9FA] uppercase">
-                  {milestone.title}
-                </h3>
-                <span className="text-xs font-bold text-accent-cyan/70 uppercase tracking-widest block mb-2">
-                  {milestone.year}
-                </span>
-                <p className="text-sm text-[#F5F9FA]/60 max-w-lg leading-relaxed">
-                  {milestone.desc}
-                </p>
+          {/* Horizontal scrollable timeline */}
+          <div className="relative">
+            {/* Left fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bg-primary/80 to-transparent z-10 pointer-events-none" />
+            {/* Right fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bg-primary/80 to-transparent z-10 pointer-events-none" />
+
+            <div className="overflow-x-auto scrollbar-hide pb-4 cursor-grab active:cursor-grabbing">
+              <div className="flex items-end px-24 gap-0" style={{ width: "max-content" }}>
+                {milestones.map((milestone, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex flex-col items-center"
+                    style={{ width: "280px" }}
+                  >
+                    {/* Card above the spine */}
+                    <div className="w-56 rounded-xl border border-accent-cyan-dim/15 bg-bg-secondary/50 backdrop-blur-sm p-5 hover:border-accent-cyan/40 hover:shadow-glow/10 transition-all duration-300 mb-6 group">
+                      <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 border border-accent-cyan-dim/20 rounded-full px-3 py-1 mb-3">
+                        {milestone.tag}
+                      </span>
+                      <h3 className="font-display text-base font-bold tracking-wider text-[#F5F9FA] uppercase mb-2">
+                        {milestone.title}
+                      </h3>
+                      <p className="text-xs text-[#F5F9FA]/60 leading-relaxed">
+                        {milestone.desc}
+                      </p>
+                    </div>
+
+                    {/* Connector line from card to node */}
+                    <div className="w-px h-6 bg-gradient-to-b from-accent-cyan-dim/40 to-accent-cyan/70" />
+
+                    {/* Node */}
+                    <div className="relative flex items-center justify-center my-1 z-10">
+                      <div className="absolute w-14 h-14 rounded-full bg-accent-cyan/5 border border-accent-cyan-dim/20 animate-pulse" />
+                      <div className="relative w-10 h-10 rounded-full bg-bg-secondary border-2 border-accent-cyan flex items-center justify-center text-accent-cyan shadow-glow">
+                        {milestone.icon}
+                      </div>
+                    </div>
+
+                    {/* Horizontal spine segment */}
+                    <div className="flex items-center w-full my-3">
+                      {index === 0 && <div className="flex-1" />}
+                      {index > 0 && <div className="flex-1 h-px bg-gradient-to-r from-accent-cyan-dim/20 to-accent-cyan-dim/40" />}
+                      <div className="w-2 h-2 rounded-full bg-accent-cyan mx-1 shrink-0" />
+                      {index < milestones.length - 1 && <div className="flex-1 h-px bg-gradient-to-r from-accent-cyan-dim/40 to-accent-cyan-dim/20" />}
+                      {index === milestones.length - 1 && <div className="flex-1" />}
+                    </div>
+
+                    {/* Year label below */}
+                    <span className="font-display text-sm font-black text-accent-cyan tracking-widest mt-1">
+                      {milestone.year}
+                    </span>
+                  </motion.div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
