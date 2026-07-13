@@ -122,7 +122,7 @@ export default function Footer() {
         {/* Bottom Bar with Copyright & Scroll to Top */}
         <div className="pt-8 border-t border-accent-cyan-dim/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-xs text-[#F5F9FA]/40 text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Viral Marketing Agency. All rights reserved. Let&apos;s make your brand Viral.
+            &copy; {new Date().getFullYear()}<span/>Viral Marketing Solution. All rights reserved. Let&apos;s make your brand Viral.
           </p>
 
           <motion.button

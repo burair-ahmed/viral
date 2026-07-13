@@ -235,10 +235,10 @@ export default function Home() {
       {/* 6. CALL TO ACTION */}
       <section className="w-full max-w-5xl mx-auto px-6 pb-28 pt-12">
         <GlowCard className="bg-gradient-to-br from-bg-secondary/60 to-bg-primary/90 text-center border-accent-cyan-dim/25 p-12 md:p-16 flex flex-col items-center">
-          <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight max-w-xl mb-4 leading-none">
+          <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight max-w-xl mx-auto mb-4 leading-none">
             Ready to break the internet?
           </h2>
-          <p className="text-sm sm:text-base text-[#F5F9FA]/70 max-w-lg mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#F5F9FA]/70 max-w-lg mx-auto mb-8 leading-relaxed">
             Stop competing for ad placements. Let&apos;s engineer custom viral loops that drive real, organic momentum for your business.
           </p>
           <Button href="/contact" variant="glow" size="lg">

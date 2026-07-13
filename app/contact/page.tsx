@@ -70,7 +70,7 @@ export default function Contact() {
       <section className="relative w-full max-w-7xl mx-auto px-6 pt-16 pb-12 text-center overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none" />
         
-        <h1 className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight max-w-4xl mb-4 leading-none">
+        <h1 className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight max-w-4xl mx-auto mb-4 leading-none">
           Connect with the <span className="text-gradient-cyan drop-shadow-[0_0_15px_rgba(46,230,230,0.3)]">engineers</span>
         </h1>
         <p className="text-sm sm:text-base text-[#F5F9FA]/60 max-w-xl mx-auto leading-relaxed">
@@ -96,8 +96,8 @@ export default function Contact() {
                   <span className="text-xs font-bold text-[#F5F9FA]/40 uppercase tracking-widest block mb-1">
                     Send email
                   </span>
-                  <a href="mailto:hello@viral.agency" className="text-sm font-semibold hover:text-accent-cyan transition-colors">
-                    hello@viral.agency
+                  <a href="mailto:info@viralmarketingsolution.com" className="text-sm font-semibold hover:text-accent-cyan transition-colors">
+                    info@viralmarketingsolution.com
                   </a>
                 </div>
               </div>
@@ -110,8 +110,8 @@ export default function Contact() {
                   <span className="text-xs font-bold text-[#F5F9FA]/40 uppercase tracking-widest block mb-1">
                     Call line
                   </span>
-                  <a href="tel:+442079460192" className="text-sm font-semibold hover:text-accent-cyan transition-colors">
-                    +44 (20) 7946 0192
+                  <a href="tel:+923114941631" className="text-sm font-semibold hover:text-accent-cyan transition-colors">
+                    +92 311 4941631
                   </a>
                 </div>
               </div>
@@ -124,8 +124,10 @@ export default function Contact() {
                   <span className="text-xs font-bold text-[#F5F9FA]/40 uppercase tracking-widest block mb-1">
                     Location
                   </span>
-                  <span className="text-sm font-semibold text-[#F5F9FA]/80">
-                    Shoreditch Labs, London, UK
+                  <span className="text-sm font-semibold text-[#F5F9FA]/80 leading-relaxed">
+                    Plot C/10/C, Street 7<br />
+                    Badar Commercial Phase 5<br />
+                    Karachi, Sindh 75500, PK
                   </span>
                 </div>
               </div>

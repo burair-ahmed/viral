@@ -67,7 +67,7 @@ export default function About() {
           The Minds Behind the Buzz
         </motion.div>
 
-        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight max-w-4xl leading-[0.95] mb-6">
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight max-w-4xl mx-auto leading-[0.95] mb-6">
           We turn traffic into <span className="text-gradient-cyan drop-shadow-[0_0_15px_rgba(46,230,230,0.3)]">movements</span>
         </h1>
         <p className="text-base sm:text-xl text-[#F5F9FA]/75 max-w-2xl mx-auto leading-relaxed font-sans">
