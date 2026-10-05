@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 
 interface MarqueeProps {
@@ -6,39 +8,49 @@ interface MarqueeProps {
   speed?: string;
   pauseOnHover?: boolean;
   className?: string;
+  repeat?: number;
 }
 
 export default function Marquee({
   children,
   direction = "left",
-  speed = "30s",
+  speed = "35s",
   pauseOnHover = true,
   className = "",
+  repeat = 3,
 }: MarqueeProps) {
+  const animClass = direction === "left" ? "animate-marquee-left" : "animate-marquee-right";
+
   return (
-    <div className={`overflow-hidden flex w-full relative select-none ${className}`}>
-      {/* Tape 1 */}
+    <div
+      className={`group flex overflow-hidden w-full select-none ${className}`}
+      style={{ "--marquee-speed": speed } as React.CSSProperties}
+    >
+      {/* Track 1 */}
       <div
-        className={`flex min-w-full shrink-0 items-center justify-around gap-8 whitespace-nowrap ${
-          direction === "left" ? "animate-[marquee-left_var(--speed)_linear_infinite]" : "animate-[marquee-right_var(--speed)_linear_infinite]"
-        } ${pauseOnHover ? "hover:[animation-play-state:paused]" : ""}`}
-        style={{
-          "--speed": speed,
-        } as React.CSSProperties}
+        className={`flex shrink-0 items-center justify-around ${animClass} ${
+          pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
+        }`}
       >
-        {children}
+        {Array.from({ length: repeat }).map((_, index) => (
+          <div key={`track-1-${index}`} className="flex shrink-0 items-center">
+            {children}
+          </div>
+        ))}
       </div>
-      {/* Tape 2 (seamless duplication) */}
+
+      {/* Track 2 (Seamless Infinite Clone) */}
       <div
-        aria-hidden
-        className={`flex min-w-full shrink-0 items-center justify-around gap-8 whitespace-nowrap ${
-          direction === "left" ? "animate-[marquee-left_var(--speed)_linear_infinite]" : "animate-[marquee-right_var(--speed)_linear_infinite]"
-        } ${pauseOnHover ? "hover:[animation-play-state:paused]" : ""}`}
-        style={{
-          "--speed": speed,
-        } as React.CSSProperties}
+        aria-hidden="true"
+        className={`flex shrink-0 items-center justify-around ${animClass} ${
+          pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
+        }`}
       >
-        {children}
+        {Array.from({ length: repeat }).map((_, index) => (
+          <div key={`track-2-${index}`} className="flex shrink-0 items-center">
+            {children}
+          </div>
+        ))}
       </div>
     </div>
   );
