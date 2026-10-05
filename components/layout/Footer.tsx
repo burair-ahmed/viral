@@ -75,7 +75,7 @@ export default function Footer() {
           {/* Logo & Narrative */}
           <div className="md:col-span-2 flex flex-col gap-4">
             <Logo width={125} height={40} />
-            <p className="text-sm text-[#F5F9FA]/60 max-w-sm mt-2 leading-relaxed">
+            <p className="text-sm text-[#FFFFFF]/60 max-w-sm mt-2 leading-relaxed">
               We engineer hyper-viral marketing systems that capture culture, scale conversations, and transform boutique brands into digital empires.
             </p>
             
@@ -89,7 +89,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={social.label}
                   whileHover={{ rotate: 10, scale: 1.1 }}
-                  className="w-10 h-10 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 flex items-center justify-center text-[#F5F9FA]/80 hover:text-accent-cyan hover:border-accent-cyan transition-all duration-300 shadow-glow/10 hover:shadow-glow/30"
+                  className="w-10 h-10 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 flex items-center justify-center text-[#FFFFFF]/80 hover:text-accent-cyan hover:border-accent-cyan transition-all duration-300 shadow-glow/10 hover:shadow-glow/30"
                 >
                   {social.icon}
                 </motion.a>
@@ -108,7 +108,7 @@ export default function Footer() {
                   <li key={linkIndex}>
                     <Link
                       href={link.href}
-                      className="text-sm text-[#F5F9FA]/75 hover:text-accent-cyan hover:pl-1 transition-all duration-300"
+                      className="text-sm text-[#FFFFFF]/75 hover:text-accent-cyan hover:pl-1 transition-all duration-300"
                     >
                       {link.label}
                     </Link>
@@ -121,15 +121,15 @@ export default function Footer() {
 
         {/* Bottom Bar with Copyright & Scroll to Top */}
         <div className="pt-8 border-t border-accent-cyan-dim/10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="text-xs text-[#F5F9FA]/40 text-center sm:text-left">
-            &copy; {new Date().getFullYear()}<span/>Viral Marketing Solution. All rights reserved. Let&apos;s make your brand Viral.
+          <p className="text-xs text-[#FFFFFF]/40 text-center sm:text-left">
+            &copy; {new Date().getFullYear()} Viral Marketing Solution. All rights reserved. Let&apos;s make your brand Viral.
           </p>
 
           <motion.button
             onClick={scrollToTop}
             whileHover={{ y: -3, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 text-xs font-bold tracking-widest uppercase text-[#F5F9FA]/80 hover:text-accent-cyan hover:border-accent-cyan transition-all duration-300 shadow-glow/5"
+            className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 text-xs font-bold tracking-widest uppercase text-[#FFFFFF]/80 hover:text-accent-cyan hover:border-accent-cyan transition-all duration-300 shadow-glow/5"
           >
             Back to Top
             <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform duration-300" />

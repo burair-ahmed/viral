@@ -83,7 +83,7 @@ export default function GlowCard({ children, className = "", cursorViewText }: G
           background: useTransform(
             [glowX, glowY],
             ([gx, gy]) =>
-              `radial-gradient(circle 200px at ${gx}px ${gy}px, rgba(46, 230, 230, 0.08) 0%, transparent 100%)`
+              `radial-gradient(circle 200px at ${gx}px ${gy}px, rgba(57, 215, 255, 0.08) 0%, transparent 100%)`
           ),
         }}
       />
@@ -97,7 +97,7 @@ export default function GlowCard({ children, className = "", cursorViewText }: G
           backgroundImage: useTransform(
             [glowX, glowY],
             ([gx, gy]) =>
-              `radial-gradient(circle 120px at ${gx}px ${gy}px, rgba(46, 230, 230, 0.4) 0%, transparent 100%)`
+              `radial-gradient(circle 120px at ${gx}px ${gy}px, rgba(57, 215, 255, 0.4) 0%, transparent 100%)`
           ),
           backgroundClip: "border-box",
           WebkitMaskComposite: "xor",

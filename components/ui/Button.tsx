@@ -35,8 +35,8 @@ export default function Button({
   };
 
   const variantStyles = {
-    glow: "bg-gradient-to-r from-accent-cyan to-[#0a9ca3] text-[#071822] hover:shadow-glow-strong hover:scale-[1.02] border border-transparent active:scale-95",
-    sheen: "bg-transparent text-[#2EE6E6] border border-[#2EE6E6] hover:bg-accent-cyan-glow/10 active:scale-95",
+    glow: "bg-gradient-to-r from-accent-cyan to-[#168BFF] text-[#06112F] hover:shadow-glow-strong hover:scale-[1.02] border border-transparent active:scale-95",
+    sheen: "bg-transparent text-[#39D7FF] border border-[#39D7FF] hover:bg-accent-cyan-glow/10 active:scale-95",
   };
 
   const content = (

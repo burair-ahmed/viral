@@ -11,7 +11,7 @@ export default function Template({ children }: { children: ReactNode }) {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="w-full h-screen bg-[#071822] relative flex flex-col justify-end"
+            className="w-full h-screen bg-[#06112F] relative flex flex-col justify-end"
             initial={{ y: "0%" }}
             animate={{ y: "-100%" }}
             transition={{
@@ -21,7 +21,7 @@ export default function Template({ children }: { children: ReactNode }) {
             }}
           >
             {/* Glowing cyan laser scanning lines at the bottom of each sliding column */}
-            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#2EE6E6] shadow-glow" />
+            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#39D7FF] shadow-glow" />
           </motion.div>
         ))}
       </div>

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#071822",
+  themeColor: "#06112F",
   width: "device-width",
   initialScale: 1,
 };
@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth selection:bg-accent-cyan/30 selection:text-accent-cyan">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable} font-sans antialiased text-[#F5F9FA] bg-[#071822] overflow-x-hidden`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable} font-sans antialiased text-[#FFFFFF] bg-[#06112F] overflow-x-hidden`}
       >
         <SmoothScroll>
           {/* Custom animated canvas background */}

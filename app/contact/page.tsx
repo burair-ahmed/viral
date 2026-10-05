@@ -73,7 +73,7 @@ export default function Contact() {
         <h1 className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight max-w-4xl mx-auto mb-4 leading-none">
           Connect with the <span className="text-gradient-cyan drop-shadow-[0_0_15px_rgba(46,230,230,0.3)]">engineers</span>
         </h1>
-        <p className="text-sm sm:text-base text-[#F5F9FA]/60 max-w-xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-base text-[#FFFFFF]/60 max-w-xl mx-auto leading-relaxed">
           Ready to scale your organic velocity? Pitch us your project details below and our team will follow up within 24 hours.
         </p>
       </section>
@@ -93,7 +93,7 @@ export default function Contact() {
                   <Mail size={18} />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-[#F5F9FA]/40 uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-bold text-[#FFFFFF]/40 uppercase tracking-widest block mb-1">
                     Send email
                   </span>
                   <a href="mailto:info@viralmarketingsolution.com" className="text-sm font-semibold hover:text-accent-cyan transition-colors">
@@ -107,7 +107,7 @@ export default function Contact() {
                   <Phone size={18} />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-[#F5F9FA]/40 uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-bold text-[#FFFFFF]/40 uppercase tracking-widest block mb-1">
                     Call line
                   </span>
                   <a href="tel:+923114941631" className="text-sm font-semibold hover:text-accent-cyan transition-colors">
@@ -121,10 +121,10 @@ export default function Contact() {
                   <MapPin size={18} />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-[#F5F9FA]/40 uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-bold text-[#FFFFFF]/40 uppercase tracking-widest block mb-1">
                     Location
                   </span>
-                  <span className="text-sm font-semibold text-[#F5F9FA]/80 leading-relaxed">
+                  <span className="text-sm font-semibold text-[#FFFFFF]/80 leading-relaxed">
                     Plot C/10/C, Street 7<br />
                     Badar Commercial Phase 5<br />
                     Karachi, Sindh 75500, PK
@@ -163,7 +163,7 @@ export default function Contact() {
                       id="name"
                       placeholder="Name"
                       {...register("name")}
-                      className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#F5F9FA]/30 ${
+                      className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#FFFFFF]/30 ${
                         errors.name ? "border-red-500/50 focus:border-red-500" : ""
                       }`}
                     />
@@ -182,7 +182,7 @@ export default function Contact() {
                         id="email"
                         placeholder="Email"
                         {...register("email")}
-                        className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#F5F9FA]/30 ${
+                        className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#FFFFFF]/30 ${
                           errors.email ? "border-red-500/50 focus:border-red-500" : ""
                         }`}
                       />
@@ -199,7 +199,7 @@ export default function Contact() {
                         id="company"
                         placeholder="Company"
                         {...register("company")}
-                        className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#F5F9FA]/30 ${
+                        className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#FFFFFF]/30 ${
                           errors.company ? "border-red-500/50 focus:border-red-500" : ""
                         }`}
                       />
@@ -213,7 +213,7 @@ export default function Contact() {
 
                   {/* Budget Selector */}
                   <div className="flex flex-col gap-3">
-                    <span className="text-xs font-bold text-[#F5F9FA]/50 uppercase tracking-widest">
+                    <span className="text-xs font-bold text-[#FFFFFF]/50 uppercase tracking-widest">
                       Estimated Project Budget
                     </span>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -227,7 +227,7 @@ export default function Contact() {
                             className={`px-4 py-3 rounded-lg border text-xs font-bold uppercase tracking-wider text-center transition-all duration-300 ${
                               isSelected
                                 ? "bg-accent-cyan-glow/10 border-accent-cyan text-accent-cyan shadow-glow/15"
-                                : "bg-bg-primary/50 border-accent-cyan-dim/15 text-[#F5F9FA]/60 hover:border-accent-cyan-dim/30"
+                                : "bg-bg-primary/50 border-accent-cyan-dim/15 text-[#FFFFFF]/60 hover:border-accent-cyan-dim/30"
                             }`}
                           >
                             {opt.label}
@@ -244,7 +244,7 @@ export default function Contact() {
                       rows={5}
                       placeholder="Tell us about your brand goals..."
                       {...register("message")}
-                      className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#F5F9FA]/30 resize-none ${
+                      className={`w-full px-5 py-4 rounded-lg bg-bg-primary/50 border border-accent-cyan-dim/20 focus:border-accent-cyan focus:outline-none text-sm transition-all placeholder:text-[#FFFFFF]/30 resize-none ${
                         errors.message ? "border-red-500/50 focus:border-red-500" : ""
                       }`}
                     />
@@ -264,7 +264,7 @@ export default function Contact() {
                     className="w-full flex items-center justify-center gap-3"
                   >
                     {isSubmitting ? (
-                      <div className="w-5 h-5 border-2 border-[#071822] border-t-transparent rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-[#06112F] border-t-transparent rounded-full animate-spin" />
                     ) : (
                       <>
                         Inject Briefing
@@ -308,7 +308,7 @@ export default function Contact() {
                   <h2 className="font-display text-2xl font-black uppercase tracking-tight">
                     Briefing Injected!
                   </h2>
-                  <p className="text-sm text-[#F5F9FA]/70 max-w-sm leading-relaxed mx-auto">
+                  <p className="text-sm text-[#FFFFFF]/70 max-w-sm leading-relaxed mx-auto">
                     We have successfully captured your data. Our attention engineers are already analyzing your brand. Expect a loop analysis outline in your inbox.
                   </p>
                 </div>

@@ -105,7 +105,7 @@ export default function CircuitBackground() {
       ctx.clearRect(0, 0, width, height);
 
       // 1. Draw grid backdrop (very faint)
-      ctx.strokeStyle = "rgba(46, 230, 230, 0.015)";
+      ctx.strokeStyle = "rgba(57, 215, 255, 0.015)";
       ctx.lineWidth = 1;
       const gridSize = 60;
       for (let x = 0; x < width; x += gridSize) {
@@ -136,7 +136,7 @@ export default function CircuitBackground() {
         // Draw nodes
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(46, 230, 230, 0.15)";
+        ctx.fillStyle = "rgba(57, 215, 255, 0.15)";
         ctx.fill();
       });
 
@@ -152,7 +152,7 @@ export default function CircuitBackground() {
         ctx.lineTo(midX, conn.to.y);
         ctx.lineTo(conn.to.x, conn.to.y);
         
-        ctx.strokeStyle = "rgba(46, 230, 230, 0.05)";
+        ctx.strokeStyle = "rgba(57, 215, 255, 0.05)";
         ctx.lineWidth = 1;
         ctx.stroke();
 
@@ -183,8 +183,8 @@ export default function CircuitBackground() {
 
           ctx.beginPath();
           ctx.arc(px, py, 2, 0, Math.PI * 2);
-          ctx.fillStyle = "#2EE6E6";
-          ctx.shadowColor = "#2EE6E6";
+          ctx.fillStyle = "#39D7FF";
+          ctx.shadowColor = "#39D7FF";
           ctx.shadowBlur = 8;
           ctx.fill();
           
@@ -212,7 +212,7 @@ export default function CircuitBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 bg-[#071822]"
+      className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 bg-[#06112F]"
     />
   );
 }

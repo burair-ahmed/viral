@@ -20,11 +20,12 @@ export default function Logo({ className = "", width = 140, height = 45, showTex
         className="relative flex items-center justify-center transition-all duration-300"
       >
         <Image
-          src="/logo-1 (1).webp"
+          src="/logo.webp"
           alt="Viral Marketing Logo"
           width={width}
           height={height}
-          className="object-contain filter transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(46,230,230,0.5)]"
+          style={{ width: "auto", height: "auto" }}
+          className="object-contain filter transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(57,215,255,0.5)]"
           priority
         />
       </motion.div>

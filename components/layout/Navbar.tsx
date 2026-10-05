@@ -58,13 +58,13 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`relative font-sans text-sm font-semibold tracking-wider transition-colors duration-300 uppercase ${
-                    isActive ? "text-[#2EE6E6]" : "text-[#F5F9FA]/80 hover:text-[#2EE6E6]"
+                    isActive ? "text-[#39D7FF]" : "text-[#FFFFFF]/80 hover:text-[#39D7FF]"
                   }`}
                 >
                   {item.label}
                   {/* Underline grow effect */}
                   <span
-                    className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] bg-[#2EE6E6] transition-all duration-300 rounded-full ${
+                    className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] bg-[#39D7FF] transition-all duration-300 rounded-full ${
                       isActive ? "w-full shadow-glow" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -83,7 +83,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-[#F5F9FA] hover:text-[#2EE6E6] transition-colors focus:outline-none"
+            className="md:hidden p-2 text-[#FFFFFF] hover:text-[#39D7FF] transition-colors focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,7 +99,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-[#071822]/95 backdrop-blur-lg z-30 md:hidden flex flex-col justify-center px-8"
+            className="fixed inset-0 bg-[#06112F]/95 backdrop-blur-lg z-30 md:hidden flex flex-col justify-center px-8"
           >
             <div className="absolute top-24 left-1/2 -translate-x-1/2 w-4/5 h-[1px] bg-accent-cyan-dim/20" />
             <nav className="flex flex-col gap-8 text-center">
@@ -116,7 +116,7 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={`text-2xl font-display font-bold tracking-widest uppercase ${
-                        isActive ? "text-[#2EE6E6]" : "text-[#F5F9FA] hover:text-[#2EE6E6]"
+                        isActive ? "text-[#39D7FF]" : "text-[#FFFFFF] hover:text-[#39D7FF]"
                       }`}
                     >
                       {item.label}

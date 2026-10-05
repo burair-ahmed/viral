@@ -77,7 +77,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#2EE6E6] mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#39D7FF] mb-8"
         >
           <Sparkles size={12} className="animate-spin" />
           Attention Engineering Agency
@@ -111,7 +111,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 1 }}
-          className="text-base sm:text-xl text-[#F5F9FA]/70 max-w-xl leading-relaxed mb-10 font-sans"
+          className="text-base sm:text-xl text-[#FFFFFF]/70 max-w-xl leading-relaxed mb-10 font-sans"
         >
           We build growth loops and culture-shaping content systems that turn passive observers into active promoters.
         </motion.p>
@@ -139,7 +139,7 @@ export default function Home() {
             (tag, idx) => (
               <span
                 key={idx}
-                className="font-display text-lg sm:text-2xl font-bold tracking-widest text-[#F5F9FA]/50 uppercase flex items-center gap-4 mx-6"
+                className="font-display text-lg sm:text-2xl font-bold tracking-widest text-[#FFFFFF]/50 uppercase flex items-center gap-4 mx-6"
               >
                 <Share2 size={18} className="text-accent-cyan" />
                 {tag}
@@ -155,7 +155,7 @@ export default function Home() {
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
             We Engineer Virality
           </h2>
-          <p className="text-sm sm:text-base text-[#F5F9FA]/60">
+          <p className="text-sm sm:text-base text-[#FFFFFF]/60">
             We don&apos;t just buy ads. We engineer social machines that gather momentum on their own.
           </p>
         </div>
@@ -168,10 +168,10 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-lg bg-accent-cyan-glow/10 border border-accent-cyan-dim/30 flex items-center justify-center mb-4 shadow-glow/10">
                     {service.icon}
                   </div>
-                  <h3 className="font-display text-xl font-bold tracking-wide text-[#F5F9FA] mb-2 uppercase">
+                  <h3 className="font-display text-xl font-bold tracking-wide text-[#FFFFFF] mb-2 uppercase">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-[#F5F9FA]/70 leading-relaxed">
+                  <p className="text-sm text-[#FFFFFF]/70 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -196,7 +196,7 @@ export default function Home() {
                 suffix={stat.suffix}
                 className="text-4xl sm:text-6xl font-display font-black text-accent-cyan drop-shadow-[0_0_10px_rgba(46,230,230,0.3)] mb-2"
               />
-              <span className="text-xs sm:text-sm font-sans tracking-wider uppercase text-[#F5F9FA]/60 font-semibold max-w-[150px]">
+              <span className="text-xs sm:text-sm font-sans tracking-wider uppercase text-[#FFFFFF]/60 font-semibold max-w-[150px]">
                 {stat.label}
               </span>
             </div>
@@ -210,7 +210,7 @@ export default function Home() {
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
             The Viral Shutter Method
           </h2>
-          <p className="text-sm sm:text-base text-[#F5F9FA]/60">
+          <p className="text-sm sm:text-base text-[#FFFFFF]/60">
             A battle-tested deployment pipeline designed to inject brands into the social lexicon.
           </p>
         </div>
@@ -221,10 +221,10 @@ export default function Home() {
               <div className="font-display text-5xl font-black text-accent-cyan-dim/20 absolute -top-8 left-4">
                 {step.num}
               </div>
-              <h3 className="font-display text-lg font-bold tracking-wider text-[#F5F9FA] uppercase mt-2">
+              <h3 className="font-display text-lg font-bold tracking-wider text-[#FFFFFF] uppercase mt-2">
                 {step.title}
               </h3>
-              <p className="text-sm text-[#F5F9FA]/60 leading-relaxed">
+              <p className="text-sm text-[#FFFFFF]/60 leading-relaxed">
                 {step.desc}
               </p>
             </div>
@@ -238,7 +238,7 @@ export default function Home() {
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight max-w-xl mx-auto mb-4 leading-none">
             Ready to break the internet?
           </h2>
-          <p className="text-sm sm:text-base text-[#F5F9FA]/70 max-w-lg mx-auto mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#FFFFFF]/70 max-w-lg mx-auto mb-8 leading-relaxed">
             Stop competing for ad placements. Let&apos;s engineer custom viral loops that drive real, organic momentum for your business.
           </p>
           <Button href="/contact" variant="glow" size="lg">
