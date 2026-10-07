@@ -89,7 +89,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={social.label}
                   whileHover={{ rotate: 10, scale: 1.1 }}
-                  className="w-10 h-10 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 flex items-center justify-center text-[#FFFFFF]/80 hover:text-accent-cyan hover:border-accent-cyan transition-all duration-300 shadow-glow/10 hover:shadow-glow/30"
+                  className="w-10 h-10 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 flex items-center justify-center text-[#FFFFFF]/80 hover:text-[#39D7FF] hover:border-[#39D7FF] transition-all duration-300 shadow-glow/10 hover:shadow-[0_0_15px_rgba(57,215,255,0.3)]"
                 >
                   {social.icon}
                 </motion.a>
@@ -108,7 +108,7 @@ export default function Footer() {
                   <li key={linkIndex}>
                     <Link
                       href={link.href}
-                      className="text-sm text-[#FFFFFF]/75 hover:text-accent-cyan hover:pl-1 transition-all duration-300"
+                      className="text-sm text-[#FFFFFF]/75 hover:text-[#39D7FF] hover:pl-1 transition-all duration-300"
                     >
                       {link.label}
                     </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
             onClick={scrollToTop}
             whileHover={{ y: -3, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 text-xs font-bold tracking-widest uppercase text-[#FFFFFF]/80 hover:text-accent-cyan hover:border-accent-cyan transition-all duration-300 shadow-glow/5"
+            className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 text-xs font-bold tracking-widest uppercase text-[#FFFFFF]/80 hover:text-[#39D7FF] hover:border-[#39D7FF] transition-all duration-300 shadow-glow/5 hover:shadow-[0_0_15px_rgba(57,215,255,0.25)]"
           >
             Back to Top
             <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform duration-300" />

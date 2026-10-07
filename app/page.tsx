@@ -77,9 +77,9 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#39D7FF] mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#168BFF] mb-8"
         >
-          <Sparkles size={12} className="animate-spin" />
+          <Sparkles size={12} className="text-[#39D7FF]" />
           Attention Engineering Agency
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function Home() {
               }}
               className={`inline-block mr-3 sm:mr-5 ${
                 word.toLowerCase() === "viral"
-                  ? "text-gradient-cyan drop-shadow-[0_0_15px_rgba(46,230,230,0.3)]"
+                  ? "text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]"
                   : ""
               }`}
             >
@@ -141,7 +141,10 @@ export default function Home() {
                 key={idx}
                 className="font-display text-lg sm:text-2xl font-bold tracking-widest text-[#FFFFFF]/50 uppercase flex items-center gap-4 mx-6"
               >
-                <Share2 size={18} className="text-accent-cyan" />
+                <Share2
+                  size={18}
+                  className={idx % 3 === 0 ? "text-[#39D7FF]" : "text-[#168BFF]"}
+                />
                 {tag}
               </span>
             )
@@ -175,9 +178,9 @@ export default function Home() {
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 flex items-center text-xs font-bold tracking-widest text-accent-cyan uppercase group cursor-pointer">
+                <div className="mt-6 flex items-center text-xs font-bold tracking-widest text-[#168BFF] hover:text-[#39D7FF] uppercase group cursor-pointer transition-colors">
                   Explore Case Studies
-                  <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 group-hover:text-[#39D7FF] transition-all" />
                 </div>
               </div>
             </GlowCard>
@@ -194,7 +197,7 @@ export default function Home() {
               <AnimatedCounter
                 value={stat.value}
                 suffix={stat.suffix}
-                className="text-4xl sm:text-6xl font-display font-black text-accent-cyan drop-shadow-[0_0_10px_rgba(46,230,230,0.3)] mb-2"
+                className="text-4xl sm:text-6xl font-display font-black text-accent-cyan drop-shadow-[0_0_15px_rgba(57,215,255,0.4)] mb-2"
               />
               <span className="text-xs sm:text-sm font-sans tracking-wider uppercase text-[#FFFFFF]/60 font-semibold max-w-[150px]">
                 {stat.label}

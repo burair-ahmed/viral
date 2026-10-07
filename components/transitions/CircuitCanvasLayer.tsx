@@ -188,7 +188,7 @@ export default function CircuitCanvasLayer({
 
           // Fast simulated border-glow plate
           if (frag.glow > 0.05) {
-            ctx.fillStyle = `rgba(57, 215, 255, ${frag.glow * 0.25})`;
+            ctx.fillStyle = `rgba(22, 139, 255, ${frag.glow * 0.25})`;
             ctx.fillRect(
               -frag.sourceWidth / 2 - 4,
               -frag.sourceHeight / 2 - 4,
@@ -270,7 +270,7 @@ export default function CircuitCanvasLayer({
           ctx.globalAlpha = frag.opacity;
 
           if (frag.glow > 0.05) {
-            ctx.fillStyle = `rgba(57, 215, 255, ${frag.glow * 0.25})`;
+            ctx.fillStyle = `rgba(22, 139, 255, ${frag.glow * 0.25})`;
             ctx.fillRect(
               -frag.sourceWidth / 2 - 4,
               -frag.sourceHeight / 2 - 4,

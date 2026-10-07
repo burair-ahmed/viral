@@ -71,7 +71,7 @@ export default function Contact() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none" />
         
         <h1 className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight max-w-4xl mx-auto mb-4 leading-none">
-          Connect with the <span className="text-gradient-cyan drop-shadow-[0_0_15px_rgba(46,230,230,0.3)]">engineers</span>
+          Connect with the <span className="text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]">engineers</span>
         </h1>
         <p className="text-sm sm:text-base text-[#FFFFFF]/60 max-w-xl mx-auto leading-relaxed">
           Ready to scale your organic velocity? Pitch us your project details below and our team will follow up within 24 hours.
@@ -226,7 +226,7 @@ export default function Contact() {
                             onClick={() => setValue("budget", opt.value)}
                             className={`px-4 py-3 rounded-lg border text-xs font-bold uppercase tracking-wider text-center transition-all duration-300 ${
                               isSelected
-                                ? "bg-accent-cyan-glow/10 border-accent-cyan text-accent-cyan shadow-glow/15"
+                                ? "bg-accent-cyan-glow/15 border-[#39D7FF] text-[#39D7FF] shadow-[0_0_15px_rgba(57,215,255,0.25)]"
                                 : "bg-bg-primary/50 border-accent-cyan-dim/15 text-[#FFFFFF]/60 hover:border-accent-cyan-dim/30"
                             }`}
                           >
@@ -261,15 +261,15 @@ export default function Contact() {
                     variant="glow"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-3"
+                    className="w-full flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <div className="w-5 h-5 border-2 border-[#06112F] border-t-transparent rounded-full animate-spin" />
                     ) : (
-                      <>
-                        Inject Briefing
-                        <Send size={15} />
-                      </>
+                      <span className="inline-flex items-center justify-center gap-2">
+                        Submit
+                        <Send size={16} className="translate-y-[-0.5px] transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
                     )}
                   </Button>
                 </motion.form>
@@ -281,13 +281,13 @@ export default function Contact() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="rounded-xl border border-accent-cyan/30 bg-bg-secondary/40 backdrop-blur-sm p-12 text-center flex flex-col items-center gap-6 shadow-glow/20"
+                className="rounded-xl border border-[#39D7FF]/30 bg-bg-secondary/40 backdrop-blur-sm p-12 text-center flex flex-col items-center gap-6 shadow-[0_0_30px_rgba(57,215,255,0.2)]"
               >
                 {/* Glowing Outer Circle */}
-                <div className="w-20 h-20 rounded-full bg-accent-cyan-glow/10 border-2 border-accent-cyan flex items-center justify-center shadow-glow">
+                <div className="w-20 h-20 rounded-full bg-accent-cyan-glow/15 border-2 border-[#39D7FF] flex items-center justify-center shadow-[0_0_20px_rgba(57,215,255,0.4)]">
                   {/* Drawing SVG Checkmark */}
                   <svg
-                    className="w-10 h-10 text-accent-cyan"
+                    className="w-10 h-10 text-[#39D7FF]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

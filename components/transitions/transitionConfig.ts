@@ -3,8 +3,8 @@ export const transitionConfig = {
   gridRows: 10,
   duration: 1.25, // in seconds
   overlap: 0.45,   // overlap between outgoing and incoming in seconds
-  glowColor: "#39D7FF",
-  glowBloom: "#7BE8FF",
+  glowColor: "#168BFF",
+  glowBloom: "#39D7FF",
   voidColor: "#06112F",
-  borderColor: "rgba(57, 215, 255, 0.45)",
+  borderColor: "rgba(22, 139, 255, 0.45)",
 };

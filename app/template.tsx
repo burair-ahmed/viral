@@ -21,7 +21,7 @@ export default function Template({ children }: { children: ReactNode }) {
             }}
           >
             {/* Glowing cyan laser scanning lines at the bottom of each sliding column */}
-            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#39D7FF] shadow-glow" />
+            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#168BFF] shadow-glow" />
           </motion.div>
         ))}
       </div>

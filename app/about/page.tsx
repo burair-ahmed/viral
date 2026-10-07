@@ -86,14 +86,14 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#39D7FF] mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#168BFF] mb-8"
         >
-          <Users size={12} />
+          <Users size={12} className="text-[#39D7FF]" />
           The Minds Behind the Buzz
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight max-w-4xl mx-auto leading-[0.95] mb-6">
-          We turn traffic into <span className="text-gradient-cyan drop-shadow-[0_0_15px_rgba(46,230,230,0.3)]">movements</span>
+          We turn traffic into <span className="text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]">movements</span>
         </h1>
         <p className="text-base sm:text-xl text-[#FFFFFF]/75 max-w-2xl mx-auto leading-relaxed font-sans">
           Viral Marketing was founded on a simple premise: traditional advertising is dead. Today, brands must be dynamic, responsive, and deeply integrated into internet culture.
@@ -216,7 +216,7 @@ export default function About() {
         <div className="relative z-10">
           {/* Section header */}
           <div className="text-center mb-16 px-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#39D7FF] mb-5">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#168BFF] mb-5">
               <Star size={11} /> Our Journey
             </span>
             <h2 className="font-display text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#FFFFFF]">
@@ -245,8 +245,12 @@ export default function About() {
                     style={{ width: "280px" }}
                   >
                     {/* Card above the spine */}
-                    <div className="w-56 rounded-xl border border-accent-cyan-dim/15 bg-bg-secondary/50 backdrop-blur-sm p-5 hover:border-accent-cyan/40 hover:shadow-glow/10 transition-all duration-300 mb-6 group">
-                      <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 border border-accent-cyan-dim/20 rounded-full px-3 py-1 mb-3">
+                    <div className="w-56 rounded-xl border border-accent-cyan-dim/15 bg-bg-secondary/50 backdrop-blur-sm p-5 hover:border-[#39D7FF]/40 hover:shadow-[0_0_15px_rgba(57,215,255,0.15)] transition-all duration-300 mb-6 group">
+                      <span className={`inline-block text-xs font-bold uppercase tracking-widest rounded-full px-3 py-1 mb-3 ${
+                        index === milestones.length - 1
+                          ? "text-[#39D7FF] bg-[#39D7FF]/10 border border-[#39D7FF]/30 shadow-[0_0_10px_rgba(57,215,255,0.2)]"
+                          : "text-accent-cyan bg-accent-cyan/10 border border-accent-cyan-dim/20"
+                      }`}>
                         {milestone.tag}
                       </span>
                       <h3 className="font-display text-base font-bold tracking-wider text-[#FFFFFF] uppercase mb-2">

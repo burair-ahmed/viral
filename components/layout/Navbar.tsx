@@ -58,14 +58,14 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`relative font-sans text-sm font-semibold tracking-wider transition-colors duration-300 uppercase ${
-                    isActive ? "text-[#39D7FF]" : "text-[#FFFFFF]/80 hover:text-[#39D7FF]"
+                    isActive ? "text-[#168BFF]" : "text-[#FFFFFF]/80 hover:text-[#39D7FF]"
                   }`}
                 >
                   {item.label}
                   {/* Underline grow effect */}
                   <span
-                    className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] bg-[#39D7FF] transition-all duration-300 rounded-full ${
-                      isActive ? "w-full shadow-glow" : "w-0 group-hover:w-full"
+                    className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-[#168BFF] to-[#39D7FF] transition-all duration-300 rounded-full ${
+                      isActive ? "w-full shadow-[0_0_10px_rgba(57,215,255,0.4)]" : "w-0 group-hover:w-full"
                     }`}
                   />
                 </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-[#FFFFFF] hover:text-[#39D7FF] transition-colors focus:outline-none"
+            className="md:hidden p-2 text-[#FFFFFF] hover:text-[#168BFF] transition-colors focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -116,7 +116,7 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={`text-2xl font-display font-bold tracking-widest uppercase ${
-                        isActive ? "text-[#39D7FF]" : "text-[#FFFFFF] hover:text-[#39D7FF]"
+                        isActive ? "text-[#168BFF]" : "text-[#FFFFFF] hover:text-[#168BFF]"
                       }`}
                     >
                       {item.label}

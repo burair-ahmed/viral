@@ -62,13 +62,13 @@ export default function CustomCursor() {
     default: {
       width: 12,
       height: 12,
-      backgroundColor: "#39D7FF",
-      border: "0px solid #39D7FF",
+      backgroundColor: "#168BFF",
+      border: "0px solid #168BFF",
     },
     hover: {
       width: 48,
       height: 48,
-      backgroundColor: "rgba(57, 215, 255, 0.1)",
+      backgroundColor: "rgba(57, 215, 255, 0.12)",
       border: "2px solid #39D7FF",
     },
     view: {
@@ -83,14 +83,14 @@ export default function CustomCursor() {
     <>
       {/* Central dot following mouse exactly */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-[#39D7FF] rounded-full pointer-events-none z-[9999] mix-blend-difference -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-2 h-2 bg-[#168BFF] rounded-full pointer-events-none z-[9999] mix-blend-difference -translate-x-1/2 -translate-y-1/2 hidden md:block"
         style={{
           x: cursorX,
           y: cursorY,
         }}
       />
       <motion.div
-        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] flex items-center justify-center -translate-x-1/2 -translate-y-1/2 hidden md:flex text-[9px] font-bold tracking-widest text-[#39D7FF] uppercase font-sans"
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] flex items-center justify-center -translate-x-1/2 -translate-y-1/2 hidden md:flex text-[9px] font-bold tracking-widest text-[#39D7FF] uppercase font-sans drop-shadow-[0_0_8px_rgba(57,215,255,0.6)]"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,

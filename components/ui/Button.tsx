@@ -35,8 +35,8 @@ export default function Button({
   };
 
   const variantStyles = {
-    glow: "bg-gradient-to-r from-accent-cyan to-[#168BFF] text-[#06112F] hover:shadow-glow-strong hover:scale-[1.02] border border-transparent active:scale-95",
-    sheen: "bg-transparent text-[#39D7FF] border border-[#39D7FF] hover:bg-accent-cyan-glow/10 active:scale-95",
+    glow: "bg-gradient-to-r from-[#168BFF] to-[#0E6BD6] text-[#FFFFFF] hover:shadow-[0_0_25px_rgba(57,215,255,0.4)] hover:scale-[1.02] border border-transparent active:scale-95",
+    sheen: "bg-transparent text-[#168BFF] border border-[#168BFF] hover:bg-accent-cyan-glow/10 hover:text-[#39D7FF] hover:border-[#39D7FF] hover:shadow-[0_0_20px_rgba(57,215,255,0.3)] active:scale-95",
   };
 
   const content = (
@@ -45,7 +45,7 @@ export default function Button({
       {variant === "sheen" && (
         <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[sheen_1.5s_infinite]" />
       )}
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 inline-flex items-center justify-center gap-2">{children}</span>
     </>
   );
 

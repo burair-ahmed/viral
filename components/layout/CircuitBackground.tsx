@@ -105,7 +105,7 @@ export default function CircuitBackground() {
       ctx.clearRect(0, 0, width, height);
 
       // 1. Draw grid backdrop (very faint)
-      ctx.strokeStyle = "rgba(57, 215, 255, 0.015)";
+      ctx.strokeStyle = "rgba(22, 139, 255, 0.015)";
       ctx.lineWidth = 1;
       const gridSize = 60;
       for (let x = 0; x < width; x += gridSize) {
@@ -136,7 +136,7 @@ export default function CircuitBackground() {
         // Draw nodes
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(57, 215, 255, 0.15)";
+        ctx.fillStyle = "rgba(22, 139, 255, 0.15)";
         ctx.fill();
       });
 
@@ -152,7 +152,7 @@ export default function CircuitBackground() {
         ctx.lineTo(midX, conn.to.y);
         ctx.lineTo(conn.to.x, conn.to.y);
         
-        ctx.strokeStyle = "rgba(57, 215, 255, 0.05)";
+        ctx.strokeStyle = "rgba(22, 139, 255, 0.05)";
         ctx.lineWidth = 1;
         ctx.stroke();
 
@@ -183,8 +183,8 @@ export default function CircuitBackground() {
 
           ctx.beginPath();
           ctx.arc(px, py, 2, 0, Math.PI * 2);
-          ctx.fillStyle = "#39D7FF";
-          ctx.shadowColor = "#39D7FF";
+          ctx.fillStyle = "#168BFF";
+          ctx.shadowColor = "#168BFF";
           ctx.shadowBlur = 8;
           ctx.fill();
           
