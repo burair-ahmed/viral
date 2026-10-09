@@ -32,10 +32,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: 450, suffix: "M+", label: "Organic Views Engineered" },
-    { value: 340, suffix: "%", label: "Average CAC Reduction" },
-    { value: 120, suffix: "+", label: "Brands Transformed" },
-    { value: 15, suffix: "x", label: "Highest Campaign ROI" },
+    { value: 1.2, suffix: "M+", label: "Organic Views Engineered" },
+    { value: 15, suffix: "%", label: "Average CAC Reduction" },
+    { value: 17, suffix: "+", label: "Brands Transformed" },
+    { value: 10, suffix: "x", label: "Highest Campaign ROI" },
   ];
 
   const processSteps = [
@@ -95,11 +95,10 @@ export default function Home() {
                 duration: 0.6,
                 ease: [0.215, 0.61, 0.355, 1],
               }}
-              className={`inline-block mr-3 sm:mr-5 ${
-                word.toLowerCase() === "viral"
+              className={`inline-block mr-3 sm:mr-5 ${word.toLowerCase() === "viral"
                   ? "text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]"
                   : ""
-              }`}
+                }`}
             >
               {word}
             </motion.span>

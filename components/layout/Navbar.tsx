@@ -11,6 +11,7 @@ import Button from "../ui/Button";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -47,7 +48,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Logo width={120} height={38} />
+          <Logo width={190} height={60} />
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">

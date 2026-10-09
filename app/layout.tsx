@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth selection:bg-accent-cyan/30 selection:text-accent-cyan">
+    <html lang="en" className="dark scroll-smooth selection:bg-accent-cyan/30 selection:text-accent-cyan" suppressHydrationWarning>
       <head>
         <Script
           async

@@ -11,7 +11,7 @@ interface LogoProps {
   showText?: boolean;
 }
 
-export default function Logo({ className = "", width = 140, height = 45, showText = true }: LogoProps) {
+export default function Logo({ className = "", width = 200, height = 64, showText = true }: LogoProps) {
   return (
     <Link href="/" className={`flex items-center group focus:outline-none ${className}`}>
       <motion.div
@@ -24,7 +24,8 @@ export default function Logo({ className = "", width = 140, height = 45, showTex
           alt="Viral Marketing Logo"
           width={width}
           height={height}
-          className="h-10 w-auto object-contain filter transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(57,215,255,0.5)]"
+          style={{ height: `${height}px`, width: "auto" }}
+          className="object-contain filter transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(57,215,255,0.6)]"
           priority
         />
       </motion.div>
