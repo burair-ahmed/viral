@@ -11,53 +11,53 @@ export default function Home() {
   const serviceItems = [
     {
       icon: <TrendingUp className="text-accent-cyan" size={28} />,
-      title: "Viral Velocity Loops",
-      description: "We design organic referral flywheels and in-app triggers that motivate users to recruit more users, scaling your growth exponentially.",
+      title: "Viral Growth Campaigns",
+      description: "We create campaigns that get people talking. Your customers become your biggest promoters — bringing in new customers for free.",
     },
     {
       icon: <Sparkles className="text-accent-cyan" size={28} />,
-      title: "Cultural Hijacking",
-      description: "We embed your brand into active social discourse, creating high-impact, authentic memes and trends that capture attention overnight.",
+      title: "Trending Content Creation",
+      description: "We craft content that fits right into what people are already watching and sharing — so your brand gets noticed naturally.",
     },
     {
       icon: <Cpu className="text-accent-cyan" size={28} />,
-      title: "Algorithm Arbitrage",
-      description: "Using data-driven feedback loops, we engineer content tailored to game discovery feeds on TikTok, Instagram, and YouTube.",
+      title: "Social Media Growth",
+      description: "We study what works on TikTok, Instagram, and YouTube and create content designed to reach more people without paying for every view.",
     },
     {
       icon: <Video className="text-accent-cyan" size={28} />,
-      title: "Content Laboratory",
-      description: "Bespoke production of highly addictive short-form videos and visually striking assets that command thumb-stops.",
+      title: "Short-Form Video Production",
+      description: "We produce high-quality short videos and eye-catching visuals that grab attention and keep people watching till the very end.",
     },
   ];
 
   const stats = [
-    { value: 1.2, suffix: "M+", label: "Organic Views Engineered" },
-    { value: 15, suffix: "%", label: "Average CAC Reduction" },
-    { value: 17, suffix: "+", label: "Brands Transformed" },
-    { value: 10, suffix: "x", label: "Highest Campaign ROI" },
+    { value: 1.2, suffix: "M+", label: "Organic Views Generated" },
+    { value: 15, suffix: "%", label: "Average Cost Savings" },
+    { value: 17, suffix: "+", label: "Brands We Have Grown" },
+    { value: 10, suffix: "x", label: "Best Campaign Return" },
   ];
 
   const processSteps = [
     {
       num: "01",
-      title: "Auditing Culture",
-      desc: "We analyze your brand DNA and scan social media for active cultural hooks.",
+      title: "We Study Your Brand",
+      desc: "We look at your business, your audience, and what is already working in your space online.",
     },
     {
       num: "02",
-      title: "Loop Engineering",
-      desc: "We draft the sharing mechanics and viral nodes to embed into your campaign.",
+      title: "We Build Your Strategy",
+      desc: "We create a custom plan — the right content, the right platforms, and the right message for your audience.",
     },
     {
       num: "03",
-      title: "Distribution Inject",
-      desc: "We launch content through our high-velocity creator networks.",
+      title: "We Launch & Spread",
+      desc: "We publish your content through our network of creators and platforms to get maximum reach.",
     },
     {
       num: "04",
-      title: "Optimize & Multiply",
-      desc: "We track engagement analytics and immediately double down on winning hooks.",
+      title: "We Track & Improve",
+      desc: "We watch the results closely and keep improving what works to get you even better outcomes.",
     },
   ];
 
@@ -72,7 +72,7 @@ export default function Home() {
         {/* Glow behind hero */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent-cyan/10 rounded-full blur-[120px] pointer-events-none" />
 
-        {/* Floating animated sparkles badge */}
+        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -80,7 +80,7 @@ export default function Home() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#168BFF] mb-8"
         >
           <Sparkles size={12} className="text-[#39D7FF]" />
-          Attention Engineering Agency
+          Pakistan&apos;s Leading Viral Marketing Agency
         </motion.div>
 
         {/* Headline Word Stagger */}
@@ -112,7 +112,7 @@ export default function Home() {
           transition={{ delay: 0.8, duration: 1 }}
           className="text-base sm:text-xl text-[#FFFFFF]/70 max-w-xl leading-relaxed mb-10 font-sans"
         >
-          We build growth loops and culture-shaping content systems that turn passive observers into active promoters.
+          We help businesses grow online through smart social media marketing, eye-catching content, and campaigns that people actually want to share.
         </motion.p>
 
         {/* Hero CTAs */}
@@ -123,10 +123,10 @@ export default function Home() {
           className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full max-w-md"
         >
           <Button href="/contact" variant="glow" size="lg" className="w-full sm:w-auto">
-            Launch a Campaign
+            Start Growing Today
           </Button>
           <Button href="/about" variant="sheen" size="lg" className="w-full sm:w-auto">
-            Our Method
+            How We Work
           </Button>
         </motion.div>
       </section>
@@ -134,7 +134,7 @@ export default function Home() {
       {/* 2. INFINITE MARQUEE TICKER */}
       <section className="w-full border-y border-accent-cyan-dim/15 bg-bg-secondary/20 py-8 overflow-hidden select-none">
         <Marquee speed="25s" direction="left">
-          {["Growth Hacking", "Viral Loops", "Content Lab", "Culture Hijacking", "Algorithmic Arbitrage", "Velocity Scaling", "Distribution Loops", "MEME Dynamics"].map(
+          {["Social Media Marketing", "Viral Campaigns", "Content Creation", "Meta Ads", "Video Editing", "Brand Growth", "Organic Reach", "Graphic Design"].map(
             (tag, idx) => (
               <span
                 key={idx}
@@ -155,10 +155,10 @@ export default function Home() {
       <section id="services" className="w-full max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-            We Engineer Virality
+            What We Do Best
           </h2>
           <p className="text-sm sm:text-base text-[#FFFFFF]/60">
-            We don&apos;t just buy ads. We engineer social machines that gather momentum on their own.
+            We don&apos;t just run ads. We build marketing that grows on its own — reaching more people every day without a bigger budget.
           </p>
         </div>
 
@@ -178,7 +178,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-6 flex items-center text-xs font-bold tracking-widest text-[#168BFF] hover:text-[#39D7FF] uppercase group cursor-pointer transition-colors">
-                  Explore Case Studies
+                  See Our Work
                   <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 group-hover:text-[#39D7FF] transition-all" />
                 </div>
               </div>
@@ -210,10 +210,10 @@ export default function Home() {
       <section className="w-full max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-20 max-w-2xl mx-auto">
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-            The Viral Shutter Method
+            How We Make It Happen
           </h2>
           <p className="text-sm sm:text-base text-[#FFFFFF]/60">
-            A battle-tested deployment pipeline designed to inject brands into the social lexicon.
+            A simple, proven process we follow with every client to deliver real and lasting results.
           </p>
         </div>
 
@@ -238,13 +238,13 @@ export default function Home() {
       <section className="w-full max-w-5xl mx-auto px-6 pb-28 pt-12">
         <GlowCard className="bg-gradient-to-br from-bg-secondary/60 to-bg-primary/90 text-center border-accent-cyan-dim/25 p-12 md:p-16 flex flex-col items-center">
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight max-w-xl mx-auto mb-4 leading-none">
-            Ready to break the internet?
+            Ready to grow your brand?
           </h2>
           <p className="text-sm sm:text-base text-[#FFFFFF]/70 max-w-lg mx-auto mb-8 leading-relaxed">
-            Stop competing for ad placements. Let&apos;s engineer custom viral loops that drive real, organic momentum for your business.
+            Stop spending money on ads that nobody remembers. Let us build a marketing strategy that actually gets results — and keeps growing.
           </p>
           <Button href="/contact" variant="glow" size="lg">
-            Connect With Our Engineers
+            Talk to Our Team
           </Button>
         </GlowCard>
       </section>

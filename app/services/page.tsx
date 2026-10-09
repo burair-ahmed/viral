@@ -236,9 +236,7 @@ export default function ServicesPage() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-[#FFFFFF]/60 text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          Every service we offer is engineered with one goal — to make your
-          brand impossible to ignore. We do not offer generic packages; we
-          build growth systems tailored to your market.
+          We offer everything your brand needs to grow online — from social media and ads to videos, websites, and design. Each service is customized to fit your goals and budget.
         </motion.p>
       </section>
 
@@ -299,13 +297,13 @@ export default function ServicesPage() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-accent-cyan/10 rounded-full blur-[80px] pointer-events-none" />
             <div className="relative z-10">
               <h2 className="font-display text-3xl md:text-4xl font-black text-white mb-4">
-                Ready to go{" "}
+                Want to see what we can do for{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#168BFF] to-[#39D7FF]">
-                  Viral?
+                  your brand?
                 </span>
               </h2>
               <p className="text-[#FFFFFF]/60 text-base mb-8 max-w-xl mx-auto">
-                Book a free strategy call and we will show you exactly what is possible for your brand.
+                Get on a free call with us. We will listen to your goals and tell you exactly what we can do to help your business grow.
               </p>
               <Link
                 href="/contact"

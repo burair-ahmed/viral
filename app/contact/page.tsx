@@ -71,10 +71,10 @@ export default function Contact() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none" />
         
         <h1 className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight max-w-4xl mx-auto mb-4 leading-none">
-          Connect with the <span className="text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]">engineers</span>
+          Let&apos;s talk about your <span className="text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]">business</span>
         </h1>
         <p className="text-sm sm:text-base text-[#FFFFFF]/60 max-w-xl mx-auto leading-relaxed">
-          Ready to scale your organic velocity? Pitch us your project details below and our team will follow up within 24 hours.
+          Whether you have a clear goal or are just starting out, we are here to help. Fill in the form below and we will get back to you within 24 hours.
         </p>
       </section>
 
@@ -306,15 +306,15 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-2">
                   <h2 className="font-display text-2xl font-black uppercase tracking-tight">
-                    Briefing Injected!
+                    Message Received!
                   </h2>
                   <p className="text-sm text-[#FFFFFF]/70 max-w-sm leading-relaxed mx-auto">
-                    We have successfully captured your data. Our attention engineers are already analyzing your brand. Expect a loop analysis outline in your inbox.
+                    Thank you for reaching out! Our team has received your message and will get back to you within 24 hours.
                   </p>
                 </div>
 
                 <Button onClick={() => setIsSubmitted(false)} variant="sheen">
-                  Submit Another Brief
+                  Send Another Message
                 </Button>
               </motion.div>
             )}

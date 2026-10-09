@@ -29,47 +29,47 @@ const teamMembers = [
 const values = [
   {
     icon: <Zap className="text-accent-cyan" size={24} />,
-    title: "Viral Velocity",
-    desc: "Speed is the currency of the internet. We deploy systems in hours, not months.",
+    title: "Speed That Matters",
+    desc: "We move fast. While others are still planning, we are already launching and getting results for our clients.",
   },
   {
     icon: <Lightbulb className="text-accent-cyan" size={24} />,
-    title: "Attention Arbitrage",
-    desc: "We look for underpriced attention pools and engineer high-yielding organic loops.",
+    title: "Smart, Creative Thinking",
+    desc: "We find the best opportunities to get your brand in front of the right people — without wasting budget on what does not work.",
   },
   {
     icon: <Rocket className="text-accent-cyan" size={24} />,
-    title: "Data-Driven Madness",
-    desc: "Creative without metrics is noise. We validate memes, structures, and systems with hard data.",
+    title: "Results You Can See",
+    desc: "Every campaign we run is tracked and measured. We show you exactly what is working and why — no guesswork, just real growth.",
   },
 ];
 
 const milestones = [
   {
     year: "2023",
-    title: "The Spark",
-    desc: "Viral Marketing was founded in Karachi with a clear mandate: make organic reach a science, not a gamble.",
+    title: "Where It All Started",
+    desc: "Viral Marketing was founded in Karachi with one goal: help local businesses grow online through content people actually want to share.",
     icon: <Flag size={18} />,
     tag: "Foundation",
   },
   {
     year: "2024",
-    title: "First Breakthrough",
-    desc: "Launched our first cross-platform viral loop campaign, achieving 50M+ impressions with zero paid spend.",
+    title: "Our First Big Win",
+    desc: "We ran our first major campaign across multiple platforms and reached over 50 million people — without spending a single rupee on ads.",
     icon: <TrendingUp size={18} />,
     tag: "Growth",
   },
   {
     year: "2025",
-    title: "Going Global",
-    desc: "Expanded operations internationally, partnering with brands across the Middle East, Europe, and South Asia.",
+    title: "Going International",
+    desc: "We expanded our work beyond Pakistan, helping brands grow in the Middle East, Europe, and South Asia.",
     icon: <Globe size={18} />,
     tag: "Expansion",
   },
   {
     year: "2026",
-    title: "Viral Lab Launched",
-    desc: "Opened our bespoke content production lab â€” engineering high-velocity content at unprecedented scale.",
+    title: "Our In-House Content Studio",
+    desc: "We opened our own production studio so we can create high-quality videos and content faster and better than ever before.",
     icon: <Rocket size={18} />,
     tag: "Innovation",
   },
@@ -89,14 +89,14 @@ export default function About() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-[#168BFF] mb-8"
         >
           <Users size={12} className="text-[#39D7FF]" />
-          The Minds Behind the Buzz
+          The Team Behind Your Growth
         </motion.div>
 
         <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight max-w-4xl mx-auto leading-[0.95] mb-6">
-          We turn traffic into <span className="text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]">movements</span>
+          We help brands grow <span className="text-gradient-cyan drop-shadow-[0_0_20px_rgba(57,215,255,0.45)]">online</span>
         </h1>
         <p className="text-base sm:text-xl text-[#FFFFFF]/75 max-w-2xl mx-auto leading-relaxed font-sans">
-          Viral Marketing was founded on a simple premise: traditional advertising is dead. Today, brands must be dynamic, responsive, and deeply integrated into internet culture.
+          We are a digital marketing agency based in Karachi. We help businesses reach more customers through social media, content creation, and online campaigns that actually work.
         </p>
       </section>
 
@@ -104,13 +104,13 @@ export default function About() {
       <section className="w-full max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="flex flex-col gap-6">
           <h2 className="font-display text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#FFFFFF]">
-            We exist to disrupt the algorithm
+            We grow your brand the smart way
           </h2>
           <p className="text-sm sm:text-base text-[#FFFFFF]/70 leading-relaxed">
-            The algorithms that dictate what people see are governed by engagement, relevance, and velocity. Standard advertising treats these as obstacles to buy over. We treat them as rules of a game we intend to win.
+            Most businesses waste money on ads that disappear the moment the budget runs out. We take a different approach — we create content and campaigns that keep working long after they are published.
           </p>
           <p className="text-sm sm:text-base text-[#FFFFFF]/70 leading-relaxed">
-            By analyzing trending subcultures, engineering viral feedback loops, and crafting high-fidelity content, we help brands get noticed naturally, scaling their userbases without inflating their advertising budgets.
+            By studying what is trending, creating content people want to share, and placing your brand in front of the right audience, we help you grow without endlessly increasing your ad spend.
           </p>
         </div>
 
@@ -139,10 +139,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 max-w-2xl mx-auto">
             <h2 className="font-display text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#FFFFFF] mb-4">
-              Our Core Architecture
+              What We Believe In
             </h2>
             <p className="text-sm text-[#FFFFFF]/60">
-              These principles guide our campaigns, layouts, animations, and growth Blueprints.
+              These are the values that guide every campaign we create and every decision we make.
             </p>
           </div>
 
@@ -168,10 +168,10 @@ export default function About() {
       <section className="w-full max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-20 max-w-2xl mx-auto">
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-            Meet the Attention Engineers
+            Meet Our Team
           </h2>
           <p className="text-sm sm:text-base text-[#FFFFFF]/60">
-            A boutique team of distribution scientists, meme researchers, and growth operators.
+            A passionate team of marketers, content creators, and strategists who genuinely love what they do.
           </p>
         </div>
 
@@ -220,7 +220,7 @@ export default function About() {
               <Star size={11} /> Our Journey
             </span>
             <h2 className="font-display text-2xl sm:text-4xl font-black uppercase tracking-tight text-[#FFFFFF]">
-              Our Trajectory
+              How We Got Here
             </h2>
             <p className="text-xs text-[#FFFFFF]/30 mt-3 tracking-widest uppercase">Scroll to explore â†’</p>
           </div>

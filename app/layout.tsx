@@ -27,10 +27,21 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Viral Marketing | Let's Make Your Brand Viral",
+  title: "Viral Marketing | Social Media & Digital Marketing Agency in Pakistan",
   description:
-    "Viral Marketing is a premium, high-animated digital marketing agency that engineers hyper-viral campaigns, organic growth loops, and culture-shaping content systems for brands.",
-  keywords: ["Viral Marketing", "Digital Agency", "Growth Hacking", "Viral Campaigns", "Marketing Agency"],
+    "Viral Marketing is a leading digital marketing agency in Karachi, Pakistan. We help businesses grow online through social media marketing, Meta ads, content creation, video editing, and website development.",
+  keywords: [
+    "digital marketing agency Pakistan",
+    "social media marketing Pakistan",
+    "viral marketing agency Karachi",
+    "Meta ads Pakistan",
+    "content creation agency",
+    "video editing services Pakistan",
+    "website development Karachi",
+    "online marketing Pakistan",
+    "brand growth Pakistan",
+    "UGC ads Pakistan",
+  ],
   authors: [{ name: "Viral Marketing Team" }],
   icons: {
     icon: [
@@ -43,15 +54,15 @@ export const metadata: Metadata = {
     "google-adsense-account": "ca-pub-9834908799284038",
   },
   openGraph: {
-    title: "Viral Marketing | Let's Make Your Brand Viral",
+    title: "Viral Marketing | Social Media & Digital Marketing Agency in Pakistan",
     description:
-      "A premium, conversion-focused digital marketing agency. We build viral distribution engines that scale businesses organically.",
+      "We help businesses grow online through social media marketing, paid ads, content creation, and professional video editing. Based in Karachi, serving clients worldwide.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Viral Marketing | Let's Make Your Brand Viral",
-    description: "Digital growth hacking and viral systems for premium brands.",
+    title: "Viral Marketing | Digital Marketing Agency Pakistan",
+    description: "Social media marketing, Meta ads, content creation, and more. Helping brands grow online across Pakistan and beyond.",
   },
 };
 

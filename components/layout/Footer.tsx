@@ -77,7 +77,7 @@ export default function Footer() {
           <div className="md:col-span-2 flex flex-col gap-4">
             <Logo width={210} height={70} />
             <p className="text-sm text-[#FFFFFF]/60 max-w-sm mt-2 leading-relaxed">
-              We engineer hyper-viral marketing systems that capture culture, scale conversations, and transform boutique brands into digital empires.
+              We help businesses in Pakistan and worldwide grow their brand online through social media marketing, content creation, and digital advertising.
             </p>
 
             {/* Social Icons with rotate-in glow */}
@@ -123,7 +123,7 @@ export default function Footer() {
         {/* Bottom Bar with Copyright & Scroll to Top */}
         <div className="pt-8 border-t border-accent-cyan-dim/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-xs text-[#FFFFFF]/40 text-center sm:text-left">
-            &copy; {new Date().getFullYear()}{' '} Viral Marketing Solution. All rights reserved. Let&apos;s make your brand Viral.
+            &copy; {new Date().getFullYear()} Viral Marketing Solution. All rights reserved.
           </p>
 
           <motion.button
