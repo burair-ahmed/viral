@@ -32,6 +32,13 @@ export const metadata: Metadata = {
     "Viral Marketing is a premium, high-animated digital marketing agency that engineers hyper-viral campaigns, organic growth loops, and culture-shaping content systems for brands.",
   keywords: ["Viral Marketing", "Digital Agency", "Growth Hacking", "Viral Campaigns", "Marketing Agency"],
   authors: [{ name: "Viral Marketing Team" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
   other: {
     "google-adsense-account": "ca-pub-9834908799284038",
   },
