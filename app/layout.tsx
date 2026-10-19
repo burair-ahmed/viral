@@ -7,6 +7,8 @@ import CustomCursor from "@/components/layout/CustomCursor";
 import CircuitBackground from "@/components/layout/CircuitBackground";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
+import FloatingBackToTop from "@/components/ui/FloatingBackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,6 +90,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable} font-sans antialiased text-[#FFFFFF] bg-[#06112F] overflow-x-hidden`}
       >
         <SmoothScroll>
@@ -101,12 +104,16 @@ export default function RootLayout({
           <Navbar />
           
           {/* Page contents (wrapped inside template.tsx for transitions) */}
-          <main className="min-h-screen pt-24 pb-0 flex flex-col justify-start">
+          <main className="min-h-screen pt-28 sm:pt-32 pb-0 flex flex-col justify-start">
             {children}
           </main>
           
           {/* Global Footer */}
           <Footer />
+
+          {/* Floating Action Buttons */}
+          <FloatingWhatsApp />
+          <FloatingBackToTop />
         </SmoothScroll>
       </body>
     </html>

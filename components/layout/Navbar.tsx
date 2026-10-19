@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles, ArrowRight } from "lucide-react";
 import Logo from "../ui/logo";
 import Button from "../ui/Button";
 
@@ -18,6 +18,7 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -39,14 +40,56 @@ export default function Navbar() {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ${
-          isScrolled
-            ? "bg-bg-primary/75 border-b border-accent-cyan-dim/20 backdrop-blur-md shadow-glow-inset py-3"
-            : "bg-transparent border-b border-transparent py-5"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <header className="fixed top-0 left-0 w-full z-40 transition-all duration-300">
+        {/* Top Announcement Bar */}
+        <AnimatePresence>
+          {showAnnouncement && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full bg-gradient-to-r from-bg-secondary via-accent-cyan-glow/30 to-bg-secondary border-b border-accent-cyan-dim/20 py-2 px-4 text-center overflow-hidden z-50 backdrop-blur-md"
+            >
+              <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 text-xs pr-6 sm:pr-0">
+                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-accent-cyan-glow/20 border border-accent-cyan-dim/40 text-[10px] font-bold text-[#39D7FF] uppercase tracking-wider shrink-0">
+                  <Sparkles size={11} className="text-[#39D7FF] animate-pulse" />
+                  Special Offer
+                </span>
+
+                <span className="font-medium text-[11px] sm:text-xs text-white/90 truncate sm:overflow-visible sm:whitespace-normal">
+                  For exclusive offers and announcements — Get up to 20% off your first campaign!
+                </span>
+
+                <Link
+                  href="/contact"
+                  className="hidden sm:inline-flex items-center gap-1 font-bold text-[11px] sm:text-xs text-[#39D7FF] hover:text-white transition-colors duration-200 uppercase tracking-wider shrink-0 group ml-1"
+                >
+                  <span className="underline underline-offset-2">Claim Now</span>
+                  <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+
+                <button
+                  onClick={() => setShowAnnouncement(false)}
+                  className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 p-1 text-white/50 hover:text-white transition-colors"
+                  aria-label="Dismiss announcement"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Main Navigation Bar */}
+        <div
+          className={`transition-all duration-500 ${
+            isScrolled
+              ? "bg-bg-primary/80 border-b border-accent-cyan-dim/20 backdrop-blur-md shadow-glow-inset py-3"
+              : "bg-transparent border-b border-transparent py-4 sm:py-5"
+          }`}
+        >
+          <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Logo width={190} height={60} />
 
@@ -90,7 +133,8 @@ export default function Navbar() {
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-      </header>
+      </div>
+    </header>
 
       {/* Mobile Drawer Overlay */}
       <AnimatePresence>

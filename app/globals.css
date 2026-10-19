@@ -40,14 +40,26 @@
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
   }
-  @keyframes marquee-left {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-  }
-  @keyframes marquee-right {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-  }
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes marquee-vertical-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes marquee-vertical-down {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
 }
 
 .animate-marquee-left {
@@ -56,6 +68,21 @@
 
 .animate-marquee-right {
   animation: marquee-right var(--marquee-speed, 35s) linear infinite;
+}
+
+.animate-marquee-vertical-up {
+  animation: marquee-vertical-up var(--marquee-vertical-speed, 28s) linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-vertical-down {
+  animation: marquee-vertical-down var(--marquee-vertical-speed, 28s) linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-vertical-up:hover,
+.animate-marquee-vertical-down:hover {
+  animation-play-state: paused;
 }
 
 :root {

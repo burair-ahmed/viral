@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUp } from "lucide-react";
 import Logo from "../ui/logo";
 
 const footerLinks = [
@@ -11,6 +10,7 @@ const footerLinks = [
     links: [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about" },
+      { label: "Services", href: "/services" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -29,10 +29,6 @@ const footerLinks = [
 ];
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const socialLinks = [
     {
       icon: (
@@ -120,21 +116,14 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom Bar with Copyright & Scroll to Top */}
-        <div className="pt-8 border-t border-accent-cyan-dim/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        {/* Bottom Bar with Copyright */}
+        <div className="pt-8 border-t border-accent-cyan-dim/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#FFFFFF]/40 text-center sm:text-left">
             &copy; {new Date().getFullYear()} Viral Marketing Solution. All rights reserved.
           </p>
-
-          <motion.button
-            onClick={scrollToTop}
-            whileHover={{ y: -3, scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-secondary border border-accent-cyan-dim/20 text-xs font-bold tracking-widest uppercase text-[#FFFFFF]/80 hover:text-[#39D7FF] hover:border-[#39D7FF] transition-all duration-300 shadow-glow/5 hover:shadow-[0_0_15px_rgba(57,215,255,0.25)]"
-          >
-            Back to Top
-            <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform duration-300" />
-          </motion.button>
+          <p className="text-xs text-[#FFFFFF]/40 text-center sm:text-right">
+            Crafted for high-growth brands in Pakistan & worldwide.
+          </p>
         </div>
       </div>
     </footer>

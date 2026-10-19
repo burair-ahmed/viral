@@ -6,6 +6,11 @@ import Button from "@/components/ui/Button";
 import GlowCard from "@/components/ui/GlowCard";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Marquee from "@/components/ui/Marquee";
+import TestimonialsSection from "@/components/ui/TestimonialsSection";
+import HeroSlider from "@/components/ui/HeroSlider";
+import PlatformsSection from "@/components/ui/PlatformsSection";
+import ComparisonSection from "@/components/ui/ComparisonSection";
+import FaqSection from "@/components/ui/FaqSection";
 
 export default function Home() {
   const serviceItems = [
@@ -120,7 +125,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full max-w-md"
+          className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full max-w-md mb-4"
         >
           <Button href="/contact" variant="glow" size="lg" className="w-full sm:w-auto">
             Start Growing Today
@@ -128,6 +133,16 @@ export default function Home() {
           <Button href="/about" variant="sheen" size="lg" className="w-full sm:w-auto">
             How We Work
           </Button>
+        </motion.div>
+
+        {/* Dynamic Hero Campaign Slider */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.1, duration: 0.8 }}
+          className="w-full"
+        >
+          <HeroSlider />
         </motion.div>
       </section>
 
@@ -206,7 +221,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. PROCESS / TIMELINE */}
+      {/* 5. PLATFORM MASTERY ECOSYSTEM */}
+      <PlatformsSection />
+
+      {/* 6. PROCESS / TIMELINE */}
       <section className="w-full max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-20 max-w-2xl mx-auto">
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
@@ -234,7 +252,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. CALL TO ACTION */}
+      {/* 7. THE VIRAL ADVANTAGE / COMPARISON */}
+      <ComparisonSection />
+
+      {/* 8. TESTIMONIALS SECTION */}
+      <TestimonialsSection />
+
+      {/* 9. FREQUENTLY ASKED QUESTIONS */}
+      <FaqSection />
+
+      {/* 10. CALL TO ACTION */}
       <section className="w-full max-w-5xl mx-auto px-6 pb-28 pt-12">
         <GlowCard className="bg-gradient-to-br from-bg-secondary/60 to-bg-primary/90 text-center border-accent-cyan-dim/25 p-12 md:p-16 flex flex-col items-center">
           <h2 className="font-display text-3xl sm:text-5xl font-black uppercase tracking-tight max-w-xl mx-auto mb-4 leading-none">

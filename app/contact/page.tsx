@@ -13,7 +13,7 @@ const contactSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   company: z.string().min(1, { message: "Company name is required." }),
-  budget: z.enum(["under-5k", "5k-10k", "10k-25k", "25k-plus"], {
+  budget: z.enum(["75k", "100k", "150k", "200k"], {
     message: "Please select a budget range.",
   }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
@@ -35,7 +35,7 @@ export default function Contact() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      budget: "5k-10k",
+      budget: "75k",
     },
   });
 
@@ -58,10 +58,10 @@ export default function Contact() {
   };
 
   const budgetOptions = [
-    { value: "under-5k", label: "< $5k" },
-    { value: "5k-10k", label: "$5k - $10k" },
-    { value: "10k-25k", label: "$10k - $25k" },
-    { value: "25k-plus", label: "$25k+" },
+    { value: "75k", label: "PKR 75k" },
+    { value: "100k", label: "PKR 100k" },
+    { value: "150k", label: "PKR 150k" },
+    { value: "200k", label: "PKR 200k" },
   ] as const;
 
   return (
