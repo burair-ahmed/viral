@@ -31,6 +31,7 @@ interface SlideData {
   highlight: string;
   badge: string;
   gradient: string;
+  caseStudyUrl: string;
 }
 
 const slides: SlideData[] = [
@@ -51,6 +52,7 @@ const slides: SlideData[] = [
     highlight: "Sold Out in 72 Hours",
     badge: "🔥 Trending #1 in Fashion",
     gradient: "from-cyan-500/20 via-blue-600/10 to-transparent",
+    caseStudyUrl: "/blog/urbanpulse-apparel-case-study-organic-views-growth",
   },
   {
     id: "s2",
@@ -69,6 +71,7 @@ const slides: SlideData[] = [
     highlight: "+410% Online Orders",
     badge: "✨ Viral Hook Masterclass",
     gradient: "from-sky-500/20 via-indigo-600/10 to-transparent",
+    caseStudyUrl: "/blog/meta-ads-vs-organic-ugc-cost-breakdown-ecommerce",
   },
   {
     id: "s3",
@@ -87,6 +90,7 @@ const slides: SlideData[] = [
     highlight: "12.4K App Installs",
     badge: "⚡ 45% Lower Acquisition Cost",
     gradient: "from-blue-600/20 via-teal-500/10 to-transparent",
+    caseStudyUrl: "/blog/how-to-structure-3-second-hook-tiktok-reels-pakistan",
   },
   {
     id: "s4",
@@ -105,6 +109,7 @@ const slides: SlideData[] = [
     highlight: "42,000 Direct Clicks",
     badge: "🎯 89% Audience Retention",
     gradient: "from-teal-500/20 via-cyan-600/10 to-transparent",
+    caseStudyUrl: "/blog/short-form-video-retention-audio-mastering-architecture",
   },
 ];
 
@@ -250,17 +255,27 @@ export default function HeroSlider() {
                 </div>
               </div>
 
-              {/* Action Button */}
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent-cyan hover:text-[#39D7FF] transition-colors group"
-              >
-                <span>Launch A Campaign Like This</span>
-                <ArrowUpRight
-                  size={15}
-                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                />
-              </Link>
+              {/* Action Buttons: Case Study Guide & Campaign CTA */}
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href={slide.caseStudyUrl}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-cyan-glow/20 border border-accent-cyan-dim/40 text-xs font-bold uppercase tracking-widest text-[#39D7FF] hover:bg-[#39D7FF] hover:text-bg-primary transition-all duration-300"
+                >
+                  <span>Read Breakdown</span>
+                  <ArrowUpRight size={14} />
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-white/70 hover:text-white transition-colors group"
+                >
+                  <span>Work With Us</span>
+                  <ArrowUpRight
+                    size={14}
+                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                  />
+                </Link>
+              </div>
             </div>
 
             {/* Right Video / Visual Card Mockup */}

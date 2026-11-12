@@ -292,6 +292,41 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* 6. VERIFIABLE HEADQUARTERS & CONTACT */}
+      <section className="w-full max-w-7xl mx-auto px-6 py-20 border-t border-accent-cyan-dim/15">
+        <div className="rounded-2xl border border-accent-cyan-dim/30 bg-bg-secondary/40 backdrop-blur-md p-8 sm:p-12 flex flex-col md:flex-row gap-8 items-center justify-between">
+          <div className="space-y-3 text-center md:text-left">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#39D7FF]">
+              Verifiable Physical Presence
+            </span>
+            <h2 className="font-display text-2xl sm:text-3xl font-black uppercase text-white">
+              Karachi Creative Studio & Headquarters
+            </h2>
+            <p className="text-sm text-white/70 max-w-xl leading-relaxed">
+              Plot C/10/C, Street 7, Badar Commercial Phase 5, DHA, Karachi, Sindh 75500, Pakistan.
+              Our in-house video labs, editing suites, and strategy rooms are located in the heart of Karachi.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+            <a
+              href="mailto:info@viralmarketingsolution.com"
+              className="px-6 py-3 rounded-lg border border-accent-cyan-dim/40 bg-accent-cyan-glow/15 text-xs font-bold uppercase tracking-wider text-[#39D7FF] hover:bg-[#39D7FF] hover:text-bg-primary transition-all duration-300 text-center"
+            >
+              Contact Office
+            </a>
+            <a
+              href="https://wa.me/923114941631"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-wider text-white hover:border-[#39D7FF] transition-all duration-300 text-center"
+            >
+              WhatsApp Studio
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

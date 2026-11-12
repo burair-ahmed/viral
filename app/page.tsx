@@ -37,10 +37,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: 1.2, suffix: "M+", label: "Organic Views Generated" },
-    { value: 15, suffix: "%", label: "Average Cost Savings" },
-    { value: 17, suffix: "+", label: "Brands We Have Grown" },
-    { value: 10, suffix: "x", label: "Best Campaign Return" },
+    { value: 1.2, decimals: 1, suffix: "M+", label: "Organic Views Generated" },
+    { value: 15, decimals: 0, suffix: "%", label: "Average Cost Savings" },
+    { value: 17, decimals: 0, suffix: "+", label: "Brands We Have Grown" },
+    { value: 10, decimals: 0, suffix: "x", label: "Best Campaign Return" },
   ];
 
   const processSteps = [
@@ -210,6 +210,7 @@ export default function Home() {
             <div key={index} className="flex flex-col items-center">
               <AnimatedCounter
                 value={stat.value}
+                decimals={stat.decimals}
                 suffix={stat.suffix}
                 className="text-4xl sm:text-6xl font-display font-black text-accent-cyan drop-shadow-[0_0_15px_rgba(57,215,255,0.4)] mb-2"
               />

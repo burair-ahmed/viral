@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { MapPin, Mail, Phone } from "lucide-react";
 import Logo from "../ui/logo";
 
 const footerLinks = [
@@ -11,7 +12,8 @@ const footerLinks = [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about" },
       { label: "Services", href: "/services" },
-      { label: "Contact", href: "/contact" },
+      { label: "Insights & Guides", href: "/blog" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
   {
@@ -24,6 +26,15 @@ const footerLinks = [
       { label: "AI Content & Automation", href: "/services" },
       { label: "UGC Ads Creation", href: "/services" },
       { label: "Video Editing", href: "/services" },
+    ],
+  },
+  {
+    title: "Legal & Trust",
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Disclaimer", href: "/disclaimer" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
     ],
   },
 ];
@@ -68,16 +79,32 @@ export default function Footer() {
       <div className="absolute -bottom-48 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Logo & Narrative */}
-          <div className="md:col-span-2 flex flex-col gap-4">
+          <div className="lg:col-span-2 flex flex-col gap-4">
             <Logo width={210} height={70} />
-            <p className="text-sm text-[#FFFFFF]/60 max-w-sm mt-2 leading-relaxed">
+            <p className="text-sm text-[#FFFFFF]/60 max-w-sm mt-1 leading-relaxed">
               We help businesses in Pakistan and worldwide grow their brand online through social media marketing, content creation, and digital advertising.
             </p>
 
+            {/* Direct Agency Credentials & Address */}
+            <div className="space-y-1.5 text-xs text-white/50 pt-2 border-t border-white/5">
+              <p className="flex items-center gap-2">
+                <MapPin size={13} className="text-[#39D7FF] shrink-0" />
+                Plot C/10/C, Street 7, Badar Commercial Phase 5, DHA, Karachi, PK
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail size={13} className="text-[#39D7FF] shrink-0" />
+                info@viralmarketingsolution.com
+              </p>
+              <p className="flex items-center gap-2">
+                <Phone size={13} className="text-[#39D7FF] shrink-0" />
+                +92 311 4941631
+              </p>
+            </div>
+
             {/* Social Icons with rotate-in glow */}
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4 mt-2">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}

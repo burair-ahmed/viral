@@ -12,6 +12,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Insights", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -33,10 +34,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on page change
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setIsOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <>
@@ -96,7 +98,7 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
@@ -149,7 +151,7 @@ export default function Navbar() {
             <div className="absolute top-24 left-1/2 -translate-x-1/2 w-4/5 h-[1px] bg-accent-cyan-dim/20" />
             <nav className="flex flex-col gap-8 text-center">
               {navItems.map((item, index) => {
-                const isActive = pathname === item.href;
+                const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
                 return (
                   <motion.div
                     key={item.href}

@@ -94,8 +94,7 @@ export default function CircuitBackground() {
     window.addEventListener("resize", resizeCanvas);
 
     // Animation Loop
-    let lastTime = 0;
-    const animate = (time: number) => {
+    const animate = () => {
       // Pause if tab is inactive
       if (document.hidden) {
         animationFrameId = requestAnimationFrame(animate);

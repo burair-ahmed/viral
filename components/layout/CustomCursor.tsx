@@ -1,10 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
   const [cursorType, setCursorType] = useState<"default" | "hover" | "view">("default");
   const [cursorText, setCursorText] = useState("");
 
@@ -16,8 +20,6 @@ export default function CustomCursor() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    setMounted(true);
-    
     // Add custom cursor styling class to body
     document.body.classList.add("custom-cursor-active");
 

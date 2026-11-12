@@ -88,6 +88,52 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MarketingAgency",
+              name: "Viral Marketing Solution",
+              alternateName: "Viral Marketing PK",
+              url: "https://theviralmarketing.pk",
+              logo: "https://theviralmarketing.pk/logo.png",
+              description:
+                "Leading digital marketing agency in Karachi, Pakistan specializing in viral campaigns, Meta ads, TikTok marketing, and high-retention short-form video production.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Plot C/10/C, Street 7, Badar Commercial Phase 5, DHA",
+                addressLocality: "Karachi",
+                addressRegion: "Sindh",
+                postalCode: "75500",
+                addressCountry: "PK",
+              },
+              telephone: "+923114941631",
+              email: "info@viralmarketingsolution.com",
+              sameAs: [
+                "https://www.facebook.com/theviralmarketingpk/",
+                "https://www.instagram.com/viralmarketingpk/",
+              ],
+              founder: [
+                {
+                  "@type": "Person",
+                  name: "Ashraf Jabbar Qureshi",
+                  jobTitle: "Chairman & Founder",
+                },
+                {
+                  "@type": "Person",
+                  name: "Dai Ali Daniyal",
+                  jobTitle: "Chief Executive Officer",
+                },
+                {
+                  "@type": "Person",
+                  name: "Armash Ashraf",
+                  jobTitle: "Chief Operating Officer",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body
         suppressHydrationWarning

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useCircuitCapture } from "./useCircuitCapture";
 import CircuitCanvasLayer from "./CircuitCanvasLayer";
@@ -29,54 +29,19 @@ export default function CircuitTransition({ children }: CircuitTransitionProps) 
     y: typeof window !== "undefined" ? window.innerHeight / 2 : 0,
   });
 
-  // Intercept all internal <a> tag clicks globally
-  useEffect(() => {
-    const handleGlobalClick = async (e: MouseEvent) => {
-      // Find closest anchor tag
-      const anchor = (e.target as HTMLElement).closest("a");
-      if (!anchor) return;
+  const completeTransition = useCallback(() => {
+    setOutgoingTexture(null);
+    setIncomingTexture(null);
+    setIsTransitioning(false);
+    setIsPendingRouteSwap(false);
+    transitionInProgress.current = false;
 
-      const href = anchor.getAttribute("href");
-      if (!href) return;
-
-      // Intercept only internal navigations (not anchors, external links, or target=_blank)
-      const isInternal = href.startsWith("/") || href.startsWith(window.location.origin);
-      const isHash = href.includes("#") || href === "/#services"; // exclude hash scrolling anchors
-      const isExternal = anchor.getAttribute("target") === "_blank";
-
-      if (isInternal && !isHash && !isExternal) {
-        // Prevent rapid click spamming during active transitions
-        if (transitionInProgress.current) {
-          e.preventDefault();
-          return;
-        }
-
-        e.preventDefault();
-        transitionInProgress.current = true;
-
-        // 1. Capture click coordinates for shockwave origin
-        setOrigin({ x: e.clientX, y: e.clientY });
-
-        // 2. Start transition flow
-        await performTransition(href);
-      }
-    };
-
-    window.addEventListener("click", handleGlobalClick);
-    return () => window.removeEventListener("click", handleGlobalClick);
-  }, [capture, router]);
-
-  // Handle popstate (browser back/forward button clicks)
-  useEffect(() => {
-    const handlePop = () => {
-      setOrigin(getCenterCoords());
-      // On browser pop, Next.js executes routing instantly, so we default to a direct page reveal
-    };
-    window.addEventListener("popstate", handlePop);
-    return () => window.removeEventListener("popstate", handlePop);
+    // Restore user scrolling and click interactions
+    document.body.style.pointerEvents = "auto";
+    document.body.style.overflow = "auto";
   }, []);
 
-  const performTransition = async (targetHref: string) => {
+  const performTransition = useCallback(async (targetHref: string) => {
     const container = containerRef.current;
     if (!container) {
       router.push(targetHref);
@@ -121,7 +86,54 @@ export default function CircuitTransition({ children }: CircuitTransitionProps) 
 
     // 3. Trigger route changes in background under canvas cover
     router.push(targetHref);
-  };
+  }, [capture, router]);
+
+  // Intercept all internal <a> tag clicks globally
+  useEffect(() => {
+    const handleGlobalClick = async (e: MouseEvent) => {
+      // Find closest anchor tag
+      const anchor = (e.target as HTMLElement).closest("a");
+      if (!anchor) return;
+
+      const href = anchor.getAttribute("href");
+      if (!href) return;
+
+      // Intercept only internal navigations (not anchors, external links, or target=_blank)
+      const isInternal = href.startsWith("/") || href.startsWith(window.location.origin);
+      const isHash = href.includes("#") || href === "/#services"; // exclude hash scrolling anchors
+      const isExternal = anchor.getAttribute("target") === "_blank";
+
+      if (isInternal && !isHash && !isExternal) {
+        // Prevent rapid click spamming during active transitions
+        if (transitionInProgress.current) {
+          e.preventDefault();
+          return;
+        }
+
+        e.preventDefault();
+        transitionInProgress.current = true;
+
+        // 1. Capture click coordinates for shockwave origin
+        setOrigin({ x: e.clientX, y: e.clientY });
+
+        // 2. Start transition flow
+        await performTransition(href);
+      }
+    };
+
+    window.addEventListener("click", handleGlobalClick);
+    return () => window.removeEventListener("click", handleGlobalClick);
+  }, [performTransition]);
+
+  // Handle popstate (browser back/forward button clicks)
+  useEffect(() => {
+    const handlePop = () => {
+      setOrigin(getCenterCoords());
+      // On browser pop, Next.js executes routing instantly, so we default to a direct page reveal
+    };
+    window.addEventListener("popstate", handlePop);
+    return () => window.removeEventListener("popstate", handlePop);
+  }, []);
 
   // Triggered when Next.js swaps the route DOM (pathname updates)
   useEffect(() => {
@@ -147,19 +159,7 @@ export default function CircuitTransition({ children }: CircuitTransitionProps) 
     };
 
     captureIncoming();
-  }, [currentPathname, isPendingRouteSwap, capture]);
-
-  const completeTransition = () => {
-    setOutgoingTexture(null);
-    setIncomingTexture(null);
-    setIsTransitioning(false);
-    setIsPendingRouteSwap(false);
-    transitionInProgress.current = false;
-
-    // Restore user scrolling and click interactions
-    document.body.style.pointerEvents = "auto";
-    document.body.style.overflow = "auto";
-  };
+  }, [currentPathname, isPendingRouteSwap, capture, completeTransition]);
 
   return (
     <>
