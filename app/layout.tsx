@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Inter, Space_Grotesk, Caveat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import EzoicRouteListener from "@/components/ads/EzoicRouteListener";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
 import CircuitBackground from "@/components/layout/CircuitBackground";
@@ -88,6 +90,26 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://the.gatekeeperconsent.com/cmp.min.js"
+          strategy="beforeInteractive"
+          data-cfasync="false"
+        />
+        <Script
+          id="ezoic-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.ezstandalone = window.ezstandalone || {};
+              window.ezstandalone.cmd = window.ezstandalone.cmd || [];
+            `,
+          }}
+        />
+        <Script
+          src="https://www.ezojs.com/ezoic/sa.min.js"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -139,6 +161,9 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable} font-sans antialiased text-[#FFFFFF] bg-[#06112F] overflow-x-hidden`}
       >
+        <Suspense fallback={null}>
+          <EzoicRouteListener />
+        </Suspense>
         <SmoothScroll>
           {/* Custom animated canvas background */}
           <CircuitBackground />

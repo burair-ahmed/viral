@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowLeft, Clock, Calendar, Sparkles, CheckCircle2, ChevronRight } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
 import AdSenseBanner from "@/components/ads/AdSenseBanner";
+import EzoicPlaceholder from "@/components/ads/EzoicPlaceholder";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -341,6 +342,9 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
       )}
+
+      {/* Ezoic Ad Placement */}
+      <EzoicPlaceholder id={102} />
 
       {/* Back to Blog Button */}
       <div className="mt-12 text-center">

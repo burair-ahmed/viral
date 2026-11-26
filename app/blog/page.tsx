@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Sparkles, Clock, ArrowRight, BookOpen, CheckCircle2, UserCheck } from "lucide-react";
 import { blogPosts, authors } from "@/lib/blog-data";
+import EzoicPlaceholder from "@/components/ads/EzoicPlaceholder";
 
 export const metadata: Metadata = {
   title: "Insights & Guides | Viral Marketing Solution Pakistan",
@@ -111,6 +112,11 @@ export default function BlogIndexPage() {
             </div>
           </div>
         </Link>
+      </section>
+
+      {/* Ezoic Ad Placement */}
+      <section className="w-full max-w-7xl mx-auto px-6 pb-8">
+        <EzoicPlaceholder id={101} />
       </section>
 
       {/* 3. ALL ARTICLES GRID */}
